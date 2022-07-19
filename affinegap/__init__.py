@@ -1,1 +1,1 @@
-from .affinegap import affineGapDistance, normalizedAffineGapDistance
+from .affinegap import affinaGapDistanceArray, affineGapDistance, normalizedAffineGapDistance

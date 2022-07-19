@@ -1,23 +1,7 @@
-#!/usr/bin/python
+from Cython.Build import cythonize
+from setuptools import Extension, setup
 
-try:
-    from setuptools import Extension, setup
-except ImportError:
-    raise ImportError(
-        "setuptools module required, please go to https://pypi.python.org/pypi/setuptools and follow the instructions for installing setuptools"
-    )
-
-try:
-    from Cython.Build import cythonize
-
-    use_cython = True
-except ImportError:
-    use_cython = False
-
-if use_cython:
-    ext_modules = cythonize([Extension("affinegap.affinegap", ["affinegap/affinegap.pyx"])])
-else:
-    ext_modules = [Extension("affinegap.affinegap", ["affinegap/affinegap.c"])]
+ext_modules = cythonize([Extension("affinegap.affinegap", ["affinegap/affinegap.pyx"])], annotate=True)
 
 setup(
     name="affinegap",

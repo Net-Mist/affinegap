@@ -1,4 +1,4 @@
-# cython: boundscheck=False, wraparound=False
+# cython: boundscheck=False, wraparound=False, nonecheck=False
 # cython: cdivision=True
 # cython: c_string_type=unicode, c_string_encoding=utf8
 # cython: language_level=3
@@ -7,7 +7,14 @@ from libc cimport limits
 from libc.stdlib cimport free, malloc
 
 
-cpdef float affineGapDistance(str string_a, str string_b,
+cdef char ** to_cchar_array(list list_char):
+    cdef char **ret = <char **>malloc(len(list_char) * sizeof(char *))
+    for i in range(len(list_char)):
+        ret[i] = list_char[i]
+    return ret
+
+
+cpdef float affineGapDistance(char* string_a, char* string_b,
                               float matchWeight = 1,
                               float mismatchWeight = 11,
                               float gapWeight = 10,
@@ -109,7 +116,7 @@ cpdef float affineGapDistance(str string_a, str string_b,
 
     return distance
 
-cpdef float normalizedAffineGapDistance(str string_a, str string_b,
+cpdef float normalizedAffineGapDistance(char* string_a, char* string_b,
                                         float matchWeight = 1,
                                         float mismatchWeight = 11,
                                         float gapWeight = 10,
@@ -132,3 +139,24 @@ cpdef float normalizedAffineGapDistance(str string_a, str string_b,
                                             abbreviation_scale)
 
     return distance/normalizer
+
+cpdef list affinaGapDistanceArray(list list_string_a,
+                              float matchWeight = 1,
+                              float mismatchWeight = 11,
+                              float gapWeight = 10,
+                              float spaceWeight = 7,
+                              float abbreviation_scale = .125):
+    cdef int len_list_string_a = len(list_string_a)
+    cdef int size = len_list_string_a * (len_list_string_a - 1) / 2
+    # cdef float * out = <float *> malloc(size * sizeof(float))
+    cdef list out = []
+    cdef char ** list_char_a = to_cchar_array(list_string_a)
+    for i in range(len_list_string_a):
+        for j in range(i+1, len_list_string_a):
+            out.append(affineGapDistance(list_char_a[i], list_char_a[j],
+                              matchWeight,
+                              mismatchWeight,
+                              gapWeight,
+                              spaceWeight,
+                              abbreviation_scale))
+    return out
