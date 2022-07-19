@@ -1,4 +1,6 @@
-# cython: boundscheck=False, wraparound=False, nonecheck=False
+# cython: boundscheck=False
+# cython: wraparound=False
+# cython: nonecheck=False
 # cython: cdivision=True
 # cython: c_string_type=unicode, c_string_encoding=utf8
 # cython: language_level=3
@@ -6,17 +8,11 @@
 
 from libc cimport limits
 from libc.stdlib cimport free, malloc
+from libcpp.string cimport string
 from libcpp.vector cimport vector
 
 
-cdef char ** to_cchar_array(list list_char):
-    cdef char **ret = <char **>malloc(len(list_char) * sizeof(char *))
-    for i in range(len(list_char)):
-        ret[i] = list_char[i]
-    return ret
-
-
-cpdef float affineGapDistance(char* string_a, char* string_b,
+cpdef float affineGapDistance(string string_a, string string_b,
                               float matchWeight = 1,
                               float mismatchWeight = 11,
                               float gapWeight = 10,
@@ -30,8 +26,8 @@ cpdef float affineGapDistance(char* string_a, char* string_b,
     http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.23.9685
     """
 
-    cdef int length1 = len(string_a)
-    cdef int length2 = len(string_b)
+    cdef int length1 = string_a.size()
+    cdef int length2 = string_b.size()
 
     if (string_a == string_b and
         matchWeight == min(matchWeight,
@@ -118,15 +114,15 @@ cpdef float affineGapDistance(char* string_a, char* string_b,
 
     return distance
 
-cpdef float normalizedAffineGapDistance(char* string_a, char* string_b,
+cpdef float normalizedAffineGapDistance(string string_a, string string_b,
                                         float matchWeight = 1,
                                         float mismatchWeight = 11,
                                         float gapWeight = 10,
                                         float spaceWeight = 7,
                                         float abbreviation_scale = .125) except? 999 :
 
-    cdef int length1 = len(string_a)
-    cdef int length2 = len(string_b)
+    cdef int length1 = string_a.size()
+    cdef int length2 = string_b.size()
 
     cdef float normalizer = length1 + length2
 
@@ -142,23 +138,23 @@ cpdef float normalizedAffineGapDistance(char* string_a, char* string_b,
 
     return distance/normalizer
 
-cpdef vector[float] affinaGapDistanceArray(list list_string_a,
+cpdef vector[float] affinaGapDistanceArray(vector[string] strings,
                               float matchWeight = 1,
                               float mismatchWeight = 11,
                               float gapWeight = 10,
                               float spaceWeight = 7,
                               float abbreviation_scale = .125):
-    cdef int len_list_string_a = len(list_string_a)
-    cdef int size = len_list_string_a * (len_list_string_a - 1) / 2
-    # cdef float * out = <float *> malloc(size * sizeof(float))
-    cdef vector[float] out
-    cdef char ** list_char_a = to_cchar_array(list_string_a)
-    for i in range(len_list_string_a):
-        for j in range(i+1, len_list_string_a):
-            out.push_back(affineGapDistance(list_char_a[i], list_char_a[j],
+    len_list_strings = strings.size()
+    size = len_list_strings * (len_list_strings - 1) / 2
+    cdef vector[float] out = vector[float](size)
+    k = 0
+    for i in range(len_list_strings):
+        for j in range(i+1, len_list_strings):
+            out[k] = (affineGapDistance(strings[i], strings[j],
                               matchWeight,
                               mismatchWeight,
                               gapWeight,
                               spaceWeight,
                               abbreviation_scale))
+            k += 1
     return out
