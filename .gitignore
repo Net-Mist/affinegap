@@ -1,0 +1,4 @@
+venv
+build
+affinegap.egg-info
+affinegap.c

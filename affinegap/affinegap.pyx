@@ -4,7 +4,8 @@
 # cython: language_level=3
 
 from libc cimport limits
-from libc.stdlib cimport malloc, free
+from libc.stdlib cimport free, malloc
+
 
 cpdef float affineGapDistance(str string_a, str string_b,
                               float matchWeight = 1,
@@ -13,10 +14,10 @@ cpdef float affineGapDistance(str string_a, str string_b,
                               float spaceWeight = 7,
                               float abbreviation_scale = .125):
     """
-    Calculate the affine gap distance between two strings 
-    
-    Default weights are from Alvaro Monge and Charles Elkan, 1996, 
-    "The field matching problem: Algorithms and applications" 
+    Calculate the affine gap distance between two strings
+
+    Default weights are from Alvaro Monge and Charles Elkan, 1996,
+    "The field matching problem: Algorithms and applications"
     http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.23.9685
     """
 
@@ -59,12 +60,12 @@ cpdef float affineGapDistance(str string_a, str string_b,
         for _ in range(0, length1 + 1) :
             V_previous[_] = V_current[_]
 
-        # Base conditions    
+        # Base conditions
         # V(i,0) = gapWeight + spaceWeight * i
-        # I(i,0) = Infinity 
+        # I(i,0) = Infinity
         V_current[0] = gapWeight + spaceWeight * i
         I = limits.INT_MAX
-    
+
         for j in range(1, length1+1) :
             char1 = string_a[j-1]
 
@@ -79,24 +80,24 @@ cpdef float affineGapDistance(str string_a, str string_b,
                 # i.e. 'spago (los angeles) to 'spago'
                 I = (min(I, V_current[j-1] + gapWeight * abbreviation_scale)
                      + spaceWeight * abbreviation_scale)
-        
+
             # D(i,j) is the edit distance if the ith character of string 2
             # was deleted from string 1
             #
             # D(i,j) = min((i-1,j), V(i-1,j) + gapWeight) + spaceWeight
             D[j] = min(D[j], V_previous[j] + gapWeight) + spaceWeight
-                    
+
             # M(i,j) is the edit distance if the ith and jth characters
             # match or mismatch
             #
-            # M(i,j) = V(i-1,j-1) + (matchWeight | misMatchWeight)    
+            # M(i,j) = V(i-1,j-1) + (matchWeight | misMatchWeight)
             if char2 == char1 :
                 M = V_previous[j-1] + matchWeight
             else:
                 M = V_previous[j-1] + mismatchWeight
-            
-            # V(i,j) is the minimum edit distance 
-            #    
+
+            # V(i,j) is the minimum edit distance
+            #
             # V(i,j) = min(E(i,j), F(i,j), G(i,j))
             V_current[j] = min(I, D[j], M)
 

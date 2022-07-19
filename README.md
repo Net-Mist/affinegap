@@ -1,5 +1,4 @@
-affinegap
-=========
+# affinegap
 
 A Cython implementation of the [affine gap penalty string distance](http://en.wikipedia.org/wiki/Gap_penalty#Affine_Gap_Penalty) also known as the [Smith–Waterman algorithm](http://en.wikipedia.org/wiki/Smith%E2%80%93Waterman_algorithm)
 
@@ -8,11 +7,13 @@ Part of the [Dedupe.io](https://dedupe.io/) cloud service and open source toolse
 [![Build Status](https://travis-ci.org/dedupeio/affinegap.svg?branch=master)](https://travis-ci.org/dedupeio/affinegap)
 
 ## To install
+
 ```bash
 pip install affinegap
 ```
 
 ## To use
+
 ```python
 import affinegap
 d1 = affinegap.affineGapDistance('foo', 'bar')
@@ -26,6 +27,7 @@ d3 = affinegap.normalizedAffineGapDistance('foo', 'bar')
 ```
 
 ## To get set up for development
+
 ```bash
 git clone https://github.com/dedupeio/affinegap.git
 cd affinegap
@@ -37,7 +39,7 @@ pytest
 
 ## Team
 
-* Forest Gregg, Dedupeio
+- Forest Gregg, Dedupeio
 
 ## Errors and Bugs
 
@@ -50,9 +52,9 @@ Help us fix the problem as quickly as possible by following [Mozilla's guideline
 
 Your patches are welcome. Here's our suggested workflow:
 
-* Fork the project.
-* Make your feature addition or bug fix.
-* Send us a pull request with a description of your work. Bonus points for topic branches!
+- Fork the project.
+- Make your feature addition or bug fix.
+- Send us a pull request with a description of your work. Bonus points for topic branches!
 
 ## Copyright and Attribution
 
