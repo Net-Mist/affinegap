@@ -2,9 +2,11 @@
 # cython: cdivision=True
 # cython: c_string_type=unicode, c_string_encoding=utf8
 # cython: language_level=3
+# cython: infer_types=True
 
 from libc cimport limits
 from libc.stdlib cimport free, malloc
+from libcpp.vector cimport vector
 
 
 cdef char ** to_cchar_array(list list_char):
@@ -140,7 +142,7 @@ cpdef float normalizedAffineGapDistance(char* string_a, char* string_b,
 
     return distance/normalizer
 
-cpdef list affinaGapDistanceArray(list list_string_a,
+cpdef vector[float] affinaGapDistanceArray(list list_string_a,
                               float matchWeight = 1,
                               float mismatchWeight = 11,
                               float gapWeight = 10,
@@ -149,11 +151,11 @@ cpdef list affinaGapDistanceArray(list list_string_a,
     cdef int len_list_string_a = len(list_string_a)
     cdef int size = len_list_string_a * (len_list_string_a - 1) / 2
     # cdef float * out = <float *> malloc(size * sizeof(float))
-    cdef list out = []
+    cdef vector[float] out
     cdef char ** list_char_a = to_cchar_array(list_string_a)
     for i in range(len_list_string_a):
         for j in range(i+1, len_list_string_a):
-            out.append(affineGapDistance(list_char_a[i], list_char_a[j],
+            out.push_back(affineGapDistance(list_char_a[i], list_char_a[j],
                               matchWeight,
                               mismatchWeight,
                               gapWeight,

@@ -1,7 +1,7 @@
 from Cython.Build import cythonize
 from setuptools import Extension, setup
 
-ext_modules = cythonize([Extension("affinegap.affinegap", ["affinegap/affinegap.pyx"])], annotate=True)
+ext_modules = cythonize([Extension("affinegap.affinegap", ["affinegap/affinegap.pyx"], language="c++")], annotate=True)
 
 setup(
     name="affinegap",
