@@ -392,9 +392,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <pre class="cython line score-0">&#xA0;<span class="">017</span>: <span class="k">from</span> <span class="nn">libcpp.vector</span> <span class="k">cimport</span> <span class="n">vector</span></pre>
 <pre class="cython line score-0">&#xA0;<span class="">018</span>: </pre>
 <pre class="cython line score-0">&#xA0;<span class="">019</span>: </pre>
-<pre class="cython line score-147" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">020</span>: <span class="k">cpdef</span> <span class="kt">float</span> <span class="nf">affineGapDistanceInputOrder</span><span class="p">(</span><span class="n">const</span> <span class="nb">int</span><span class="p">[::</span><span class="mf">1</span><span class="p">]</span><span class="o">&amp;</span> <span class="n">int_memview_1</span><span class="p">,</span> <span class="n">const</span> <span class="nb">int</span><span class="p">[::</span><span class="mf">1</span><span class="p">]</span><span class="o">&amp;</span> <span class="n">int_memview_2</span><span class="p">,</span> <span class="n">const</span> <span class="nb">int</span> <span class="n">length1</span><span class="p">,</span> <span class="n">const</span> <span class="nb">int</span> <span class="n">length2</span><span class="p">,</span></pre>
-<pre class='cython code score-147 '>static PyObject *__pyx_pw_9affinegap_9affinegap_1affineGapDistanceInputOrder(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static float __pyx_f_9affinegap_9affinegap_affineGapDistanceInputOrder(__Pyx_memviewslice &amp;__pyx_v_int_memview_1, __Pyx_memviewslice &amp;__pyx_v_int_memview_2, int const __pyx_v_length1, int const __pyx_v_length2, float const __pyx_v_matchWeight, float const __pyx_v_mismatchWeight, float const __pyx_v_gapWeight, float const __pyx_v_spaceWeight, float const __pyx_v_abbreviation_scale, CYTHON_UNUSED int __pyx_skip_dispatch) {
+<pre class="cython line score-115" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">020</span>: <span class="k">cpdef</span> <span class="kt">float</span> <span class="nf">affineGapDistanceInputOrder</span><span class="p">(</span><span class="n">const</span> <span class="nb">int</span><span class="p">[::</span><span class="mf">1</span><span class="p">]</span><span class="o">&amp;</span> <span class="n">int_memview_1</span><span class="p">,</span> <span class="n">const</span> <span class="nb">int</span><span class="p">[::</span><span class="mf">1</span><span class="p">]</span><span class="o">&amp;</span> <span class="n">int_memview_2</span><span class="p">,</span> <span class="n">const</span> <span class="nb">int</span> <span class="n">length1</span><span class="p">,</span> <span class="n">const</span> <span class="nb">int</span> <span class="n">length2</span><span class="p">,</span></pre>
+<pre class='cython code score-115 '>static PyObject *__pyx_pw_9affinegap_9affinegap_1affineGapDistanceInputOrder(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static float __pyx_f_9affinegap_9affinegap_affineGapDistanceInputOrder(__Pyx_memviewslice &amp;__pyx_v_int_memview_1, __Pyx_memviewslice &amp;__pyx_v_int_memview_2, int const __pyx_v_length1, int const __pyx_v_length2, float const __pyx_v_gapWeight, float const __pyx_v_spaceWeight, float const __pyx_v_abbreviation_scale, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int const *__pyx_v_int_ptr_1;
   int const *__pyx_v_int_ptr_2;
   int __pyx_v_memory_size;
@@ -424,8 +424,6 @@ static PyObject *__pyx_pw_9affinegap_9affinegap_1affineGapDistanceInputOrder(PyO
   __Pyx_memviewslice __pyx_v_int_memview_2 = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_v_length1;
   int __pyx_v_length2;
-  float __pyx_v_matchWeight;
-  float __pyx_v_mismatchWeight;
   float __pyx_v_gapWeight;
   float __pyx_v_spaceWeight;
   float __pyx_v_abbreviation_scale;
@@ -433,16 +431,12 @@ static PyObject *__pyx_pw_9affinegap_9affinegap_1affineGapDistanceInputOrder(PyO
   <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
   <span class='refnanny'>__Pyx_RefNannySetupContext</span>("affineGapDistanceInputOrder (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&amp;__pyx_n_s_int_memview_1,&amp;__pyx_n_s_int_memview_2,&amp;__pyx_n_s_length1,&amp;__pyx_n_s_length2,&amp;__pyx_n_s_matchWeight,&amp;__pyx_n_s_mismatchWeight,&amp;__pyx_n_s_gapWeight,&amp;__pyx_n_s_spaceWeight,&amp;__pyx_n_s_abbreviation_scale,0};
-    PyObject* values[9] = {0,0,0,0,0,0,0,0,0};
+    static PyObject **__pyx_pyargnames[] = {&amp;__pyx_n_s_int_memview_1,&amp;__pyx_n_s_int_memview_2,&amp;__pyx_n_s_length1,&amp;__pyx_n_s_length2,&amp;__pyx_n_s_gapWeight,&amp;__pyx_n_s_spaceWeight,&amp;__pyx_n_s_abbreviation_scale,0};
+    PyObject* values[7] = {0,0,0,0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args);
       switch (pos_args) {
-        case  9: values[8] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 8);
-        CYTHON_FALLTHROUGH;
-        case  8: values[7] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 7);
-        CYTHON_FALLTHROUGH;
         case  7: values[6] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 6);
         CYTHON_FALLTHROUGH;
         case  6: values[5] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 5);
@@ -469,55 +463,43 @@ static PyObject *__pyx_pw_9affinegap_9affinegap_1affineGapDistanceInputOrder(PyO
         case  1:
         if (likely((values[1] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_int_memview_2)) != 0)) kw_args--;
         else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistanceInputOrder", 1, 9, 9, 1); <span class='error_goto'>__PYX_ERR(0, 20, __pyx_L3_error)</span>
+          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistanceInputOrder", 1, 7, 7, 1); <span class='error_goto'>__PYX_ERR(0, 20, __pyx_L3_error)</span>
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_length1)) != 0)) kw_args--;
         else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistanceInputOrder", 1, 9, 9, 2); <span class='error_goto'>__PYX_ERR(0, 20, __pyx_L3_error)</span>
+          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistanceInputOrder", 1, 7, 7, 2); <span class='error_goto'>__PYX_ERR(0, 20, __pyx_L3_error)</span>
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_length2)) != 0)) kw_args--;
         else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistanceInputOrder", 1, 9, 9, 3); <span class='error_goto'>__PYX_ERR(0, 20, __pyx_L3_error)</span>
+          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistanceInputOrder", 1, 7, 7, 3); <span class='error_goto'>__PYX_ERR(0, 20, __pyx_L3_error)</span>
         }
         CYTHON_FALLTHROUGH;
         case  4:
-        if (likely((values[4] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_matchWeight)) != 0)) kw_args--;
+        if (likely((values[4] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_gapWeight)) != 0)) kw_args--;
         else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistanceInputOrder", 1, 9, 9, 4); <span class='error_goto'>__PYX_ERR(0, 20, __pyx_L3_error)</span>
+          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistanceInputOrder", 1, 7, 7, 4); <span class='error_goto'>__PYX_ERR(0, 20, __pyx_L3_error)</span>
         }
         CYTHON_FALLTHROUGH;
         case  5:
-        if (likely((values[5] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_mismatchWeight)) != 0)) kw_args--;
+        if (likely((values[5] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_spaceWeight)) != 0)) kw_args--;
         else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistanceInputOrder", 1, 9, 9, 5); <span class='error_goto'>__PYX_ERR(0, 20, __pyx_L3_error)</span>
+          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistanceInputOrder", 1, 7, 7, 5); <span class='error_goto'>__PYX_ERR(0, 20, __pyx_L3_error)</span>
         }
         CYTHON_FALLTHROUGH;
         case  6:
-        if (likely((values[6] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_gapWeight)) != 0)) kw_args--;
+        if (likely((values[6] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_abbreviation_scale)) != 0)) kw_args--;
         else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistanceInputOrder", 1, 9, 9, 6); <span class='error_goto'>__PYX_ERR(0, 20, __pyx_L3_error)</span>
-        }
-        CYTHON_FALLTHROUGH;
-        case  7:
-        if (likely((values[7] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_spaceWeight)) != 0)) kw_args--;
-        else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistanceInputOrder", 1, 9, 9, 7); <span class='error_goto'>__PYX_ERR(0, 20, __pyx_L3_error)</span>
-        }
-        CYTHON_FALLTHROUGH;
-        case  8:
-        if (likely((values[8] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_abbreviation_scale)) != 0)) kw_args--;
-        else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistanceInputOrder", 1, 9, 9, 8); <span class='error_goto'>__PYX_ERR(0, 20, __pyx_L3_error)</span>
+          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistanceInputOrder", 1, 7, 7, 6); <span class='error_goto'>__PYX_ERR(0, 20, __pyx_L3_error)</span>
         }
       }
       if (unlikely(kw_args &gt; 0)) {
         if (unlikely(<span class='pyx_c_api'>__Pyx_ParseOptionalKeywords</span>(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "affineGapDistanceInputOrder") &lt; 0)) <span class='error_goto'>__PYX_ERR(0, 20, __pyx_L3_error)</span>
       }
-    } else if (<span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args) != 9) {
+    } else if (<span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args) != 7) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 0);
@@ -527,28 +509,24 @@ static PyObject *__pyx_pw_9affinegap_9affinegap_1affineGapDistanceInputOrder(PyO
       values[4] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 4);
       values[5] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 5);
       values[6] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 6);
-      values[7] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 7);
-      values[8] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 8);
     }
     __pyx_v_int_memview_1 = <span class='pyx_c_api'>__Pyx_PyObject_to_MemoryviewSlice_dc_int__const__</span>(values[0], 0);<span class='error_goto'> if (unlikely(!__pyx_v_int_memview_1.memview)) __PYX_ERR(0, 20, __pyx_L3_error)</span>
     __pyx_v_int_memview_2 = <span class='pyx_c_api'>__Pyx_PyObject_to_MemoryviewSlice_dc_int__const__</span>(values[1], 0);<span class='error_goto'> if (unlikely(!__pyx_v_int_memview_2.memview)) __PYX_ERR(0, 20, __pyx_L3_error)</span>
     __pyx_v_length1 = <span class='pyx_c_api'>__Pyx_PyInt_As_int</span>(values[2]); if (unlikely((__pyx_v_length1 == (int)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 20, __pyx_L3_error)</span>
     __pyx_v_length2 = <span class='pyx_c_api'>__Pyx_PyInt_As_int</span>(values[3]); if (unlikely((__pyx_v_length2 == (int)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 20, __pyx_L3_error)</span>
-    __pyx_v_matchWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[4]); if (unlikely((__pyx_v_matchWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 21, __pyx_L3_error)</span>
-    __pyx_v_mismatchWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[5]); if (unlikely((__pyx_v_mismatchWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 22, __pyx_L3_error)</span>
-    __pyx_v_gapWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[6]); if (unlikely((__pyx_v_gapWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 23, __pyx_L3_error)</span>
-    __pyx_v_spaceWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[7]); if (unlikely((__pyx_v_spaceWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 24, __pyx_L3_error)</span>
-    __pyx_v_abbreviation_scale = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[8]); if (unlikely((__pyx_v_abbreviation_scale == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 25, __pyx_L3_error)</span>
+    __pyx_v_gapWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[4]); if (unlikely((__pyx_v_gapWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 21, __pyx_L3_error)</span>
+    __pyx_v_spaceWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[5]); if (unlikely((__pyx_v_spaceWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 22, __pyx_L3_error)</span>
+    __pyx_v_abbreviation_scale = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[6]); if (unlikely((__pyx_v_abbreviation_scale == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 23, __pyx_L3_error)</span>
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistanceInputOrder", 1, 9, 9, <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args)); <span class='error_goto'>__PYX_ERR(0, 20, __pyx_L3_error)</span>
+  <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistanceInputOrder", 1, 7, 7, <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args)); <span class='error_goto'>__PYX_ERR(0, 20, __pyx_L3_error)</span>
   __pyx_L3_error:;
   <span class='pyx_c_api'>__Pyx_AddTraceback</span>("affinegap.affinegap.affineGapDistanceInputOrder", __pyx_clineno, __pyx_lineno, __pyx_filename);
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9affinegap_9affinegap_affineGapDistanceInputOrder(__pyx_self, __pyx_v_int_memview_1, __pyx_v_int_memview_2, __pyx_v_length1, __pyx_v_length2, __pyx_v_matchWeight, __pyx_v_mismatchWeight, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale);
+  __pyx_r = __pyx_pf_9affinegap_9affinegap_affineGapDistanceInputOrder(__pyx_self, __pyx_v_int_memview_1, __pyx_v_int_memview_2, __pyx_v_length1, __pyx_v_length2, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale);
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -558,14 +536,14 @@ static PyObject *__pyx_pw_9affinegap_9affinegap_1affineGapDistanceInputOrder(PyO
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9affinegap_9affinegap_affineGapDistanceInputOrder(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_int_memview_1, __Pyx_memviewslice __pyx_v_int_memview_2, int __pyx_v_length1, int __pyx_v_length2, float __pyx_v_matchWeight, float __pyx_v_mismatchWeight, float __pyx_v_gapWeight, float __pyx_v_spaceWeight, float __pyx_v_abbreviation_scale) {
+static PyObject *__pyx_pf_9affinegap_9affinegap_affineGapDistanceInputOrder(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_int_memview_1, __Pyx_memviewslice __pyx_v_int_memview_2, int __pyx_v_length1, int __pyx_v_length2, float __pyx_v_gapWeight, float __pyx_v_spaceWeight, float __pyx_v_abbreviation_scale) {
   PyObject *__pyx_r = NULL;
   <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
   <span class='refnanny'>__Pyx_RefNannySetupContext</span>("affineGapDistanceInputOrder", 0);
   <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
   if (unlikely(!__pyx_v_int_memview_1.memview)) { <span class='pyx_c_api'>__Pyx_RaiseUnboundLocalError</span>("int_memview_1"); <span class='error_goto'>__PYX_ERR(0, 20, __pyx_L1_error)</span> }
   if (unlikely(!__pyx_v_int_memview_2.memview)) { <span class='pyx_c_api'>__Pyx_RaiseUnboundLocalError</span>("int_memview_2"); <span class='error_goto'>__PYX_ERR(0, 20, __pyx_L1_error)</span> }
-  __pyx_t_1 = <span class='py_c_api'>PyFloat_FromDouble</span>(__pyx_f_9affinegap_9affinegap_affineGapDistanceInputOrder(__pyx_v_int_memview_1, __pyx_v_int_memview_2, __pyx_v_length1, __pyx_v_length2, __pyx_v_matchWeight, __pyx_v_mismatchWeight, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale, 0));<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 20, __pyx_L1_error)</span>
+  __pyx_t_1 = <span class='py_c_api'>PyFloat_FromDouble</span>(__pyx_f_9affinegap_9affinegap_affineGapDistanceInputOrder(__pyx_v_int_memview_1, __pyx_v_int_memview_2, __pyx_v_length1, __pyx_v_length2, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale, 0));<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 20, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -583,92 +561,90 @@ static PyObject *__pyx_pf_9affinegap_9affinegap_affineGapDistanceInputOrder(CYTH
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return __pyx_r;
 }
-</pre><pre class="cython line score-0">&#xA0;<span class="">021</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">matchWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">022</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">mismatchWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">023</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">gapWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">024</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">spaceWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">025</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">abbreviation_scale</span><span class="p">):</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">026</span>:     <span class="c"># suppose len(int_memview_1) &lt;= len(int_memview_2)</span></pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">027</span>:     <span class="k">cdef</span> <span class="kt">const</span> <span class="kt">int</span> * <span class="nf">int_ptr_1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">int_memview_1</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">021</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">gapWeight</span><span class="p">,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">022</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">spaceWeight</span><span class="p">,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">023</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">abbreviation_scale</span><span class="p">):</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">024</span>:     <span class="c"># suppose len(int_memview_1) &lt;= len(int_memview_2)</span></pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">025</span>:     <span class="k">cdef</span> <span class="kt">const</span> <span class="kt">int</span> * <span class="nf">int_ptr_1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">int_memview_1</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span></pre>
 <pre class='cython code score-0 '>  __pyx_t_1 = 0;
   __pyx_v_int_ptr_1 = (&amp;(*((int const  *) ( /* dim=0 */ ((char *) (((int const  *) __pyx_v_int_memview_1.data) + __pyx_t_1)) ))));
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">028</span>:     <span class="k">cdef</span> <span class="kt">const</span> <span class="kt">int</span> * <span class="nf">int_ptr_2</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">int_memview_2</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">026</span>:     <span class="k">cdef</span> <span class="kt">const</span> <span class="kt">int</span> * <span class="nf">int_ptr_2</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">int_memview_2</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span></pre>
 <pre class='cython code score-0 '>  __pyx_t_1 = 0;
   __pyx_v_int_ptr_2 = (&amp;(*((int const  *) ( /* dim=0 */ ((char *) (((int const  *) __pyx_v_int_memview_2.data) + __pyx_t_1)) ))));
-</pre><pre class="cython line score-0">&#xA0;<span class="">029</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">030</span>:     <span class="c"># Initialize C Arrays</span></pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">031</span>:     <span class="k">cdef</span> <span class="kt">int</span> <span class="nf">memory_size</span> <span class="o">=</span> <span class="n">sizeof</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">length1</span><span class="o">+</span><span class="mf">1</span><span class="p">)</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">027</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">028</span>:     <span class="c"># Initialize C Arrays</span></pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">029</span>:     <span class="k">cdef</span> <span class="kt">int</span> <span class="nf">memory_size</span> <span class="o">=</span> <span class="n">sizeof</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">length1</span><span class="o">+</span><span class="mf">1</span><span class="p">)</span></pre>
 <pre class='cython code score-0 '>  __pyx_v_memory_size = ((sizeof(float)) * (__pyx_v_length1 + 1));
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">032</span>:     <span class="k">cdef</span> <span class="kt">float</span> *<span class="nf">D</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nb">float</span><span class="o">*&gt;</span> <span class="n">malloc</span><span class="p">(</span><span class="n">memory_size</span><span class="p">)</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">030</span>:     <span class="k">cdef</span> <span class="kt">float</span> *<span class="nf">D</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nb">float</span><span class="o">*&gt;</span> <span class="n">malloc</span><span class="p">(</span><span class="n">memory_size</span><span class="p">)</span></pre>
 <pre class='cython code score-0 '>  __pyx_v_D = ((float *)malloc(__pyx_v_memory_size));
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">033</span>:     <span class="k">cdef</span> <span class="kt">float</span> *<span class="nf">V_current</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nb">float</span><span class="o">*&gt;</span> <span class="n">malloc</span><span class="p">(</span><span class="n">memory_size</span><span class="p">)</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">031</span>:     <span class="k">cdef</span> <span class="kt">float</span> *<span class="nf">V_current</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nb">float</span><span class="o">*&gt;</span> <span class="n">malloc</span><span class="p">(</span><span class="n">memory_size</span><span class="p">)</span></pre>
 <pre class='cython code score-0 '>  __pyx_v_V_current = ((float *)malloc(__pyx_v_memory_size));
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">034</span>:     <span class="k">cdef</span> <span class="kt">float</span> *<span class="nf">V_previous</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nb">float</span><span class="o">*&gt;</span> <span class="n">malloc</span><span class="p">(</span><span class="n">memory_size</span><span class="p">)</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">032</span>:     <span class="k">cdef</span> <span class="kt">float</span> *<span class="nf">V_previous</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nb">float</span><span class="o">*&gt;</span> <span class="n">malloc</span><span class="p">(</span><span class="n">memory_size</span><span class="p">)</span></pre>
 <pre class='cython code score-0 '>  __pyx_v_V_previous = ((float *)malloc(__pyx_v_memory_size));
-</pre><pre class="cython line score-0">&#xA0;<span class="">035</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">036</span>:     <span class="k">cdef</span> <span class="kt">int</span> <span class="nf">i</span><span class="p">,</span> <span class="nf">j</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">037</span>:     <span class="k">cdef</span> <span class="kt">float</span> <span class="nf">distance</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">038</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">039</span>:     <span class="c"># Set up Recurrence relations</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">040</span>:     <span class="c">#</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">041</span>:     <span class="c"># Base conditions</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">042</span>:     <span class="c"># V(0,0) = 0</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">043</span>:     <span class="c"># V(0,j) = gapWeight + spaceWeight * i</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">044</span>:     <span class="c"># D(0,j) = Infinity</span></pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">045</span>:     <span class="n">V_current</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">033</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">034</span>:     <span class="k">cdef</span> <span class="kt">int</span> <span class="nf">i</span><span class="p">,</span> <span class="nf">j</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">035</span>:     <span class="k">cdef</span> <span class="kt">float</span> <span class="nf">distance</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">036</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">037</span>:     <span class="c"># Set up Recurrence relations</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">038</span>:     <span class="c">#</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">039</span>:     <span class="c"># Base conditions</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">040</span>:     <span class="c"># V(0,0) = 0</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">041</span>:     <span class="c"># V(0,j) = gapWeight + spaceWeight * i</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">042</span>:     <span class="c"># D(0,j) = Infinity</span></pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">043</span>:     <span class="n">V_current</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0</span></pre>
 <pre class='cython code score-0 '>  (__pyx_v_V_current[0]) = 0.0;
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">046</span>:     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span> <span class="n">length1</span> <span class="o">+</span> <span class="mf">1</span><span class="p">)</span> <span class="p">:</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">044</span>:     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span> <span class="n">length1</span> <span class="o">+</span> <span class="mf">1</span><span class="p">)</span> <span class="p">:</span></pre>
 <pre class='cython code score-0 '>  __pyx_t_2 = (__pyx_v_length1 + 1);
   __pyx_t_3 = __pyx_t_2;
   for (__pyx_t_4 = 1; __pyx_t_4 &lt; __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_j = __pyx_t_4;
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">047</span>:         <span class="n">V_current</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">gapWeight</span> <span class="o">+</span> <span class="n">spaceWeight</span> <span class="o">*</span> <span class="n">j</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">045</span>:         <span class="n">V_current</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">gapWeight</span> <span class="o">+</span> <span class="n">spaceWeight</span> <span class="o">*</span> <span class="n">j</span></pre>
 <pre class='cython code score-0 '>    (__pyx_v_V_current[__pyx_v_j]) = (__pyx_v_gapWeight + (__pyx_v_spaceWeight * __pyx_v_j));
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">048</span>:         <span class="n">D</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">limits</span><span class="o">.</span><span class="n">INT_MAX</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">046</span>:         <span class="n">D</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">limits</span><span class="o">.</span><span class="n">INT_MAX</span></pre>
 <pre class='cython code score-0 '>    (__pyx_v_D[__pyx_v_j]) = INT_MAX;
   }
-</pre><pre class="cython line score-0">&#xA0;<span class="">049</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">050</span>:     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span> <span class="n">length2</span> <span class="o">+</span><span class="mf">1</span><span class="p">)</span> <span class="p">:</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">047</span>: </pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">048</span>:     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span> <span class="n">length2</span> <span class="o">+</span><span class="mf">1</span><span class="p">)</span> <span class="p">:</span></pre>
 <pre class='cython code score-0 '>  __pyx_t_2 = (__pyx_v_length2 + 1);
   __pyx_t_3 = __pyx_t_2;
   for (__pyx_t_4 = 1; __pyx_t_4 &lt; __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_i = __pyx_t_4;
-</pre><pre class="cython line score-0">&#xA0;<span class="">051</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">052</span>:         <span class="c"># V_previous = V_current</span></pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">053</span>:         <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="n">length1</span> <span class="o">+</span> <span class="mf">1</span><span class="p">)</span> <span class="p">:</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">049</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">050</span>:         <span class="c"># V_previous = V_current</span></pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">051</span>:         <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="n">length1</span> <span class="o">+</span> <span class="mf">1</span><span class="p">)</span> <span class="p">:</span></pre>
 <pre class='cython code score-0 '>    __pyx_t_5 = (__pyx_v_length1 + 1);
     __pyx_t_6 = __pyx_t_5;
     for (__pyx_t_7 = 0; __pyx_t_7 &lt; __pyx_t_6; __pyx_t_7+=1) {
       __pyx_v__ = __pyx_t_7;
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">054</span>:             <span class="n">V_previous</span><span class="p">[</span><span class="n">_</span><span class="p">]</span> <span class="o">=</span> <span class="n">V_current</span><span class="p">[</span><span class="n">_</span><span class="p">]</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">052</span>:             <span class="n">V_previous</span><span class="p">[</span><span class="n">_</span><span class="p">]</span> <span class="o">=</span> <span class="n">V_current</span><span class="p">[</span><span class="n">_</span><span class="p">]</span></pre>
 <pre class='cython code score-0 '>      (__pyx_v_V_previous[__pyx_v__]) = (__pyx_v_V_current[__pyx_v__]);
     }
-</pre><pre class="cython line score-0">&#xA0;<span class="">055</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">056</span>:         <span class="c"># Base conditions</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">057</span>:         <span class="c"># V(i,0) = gapWeight + spaceWeight * i</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">058</span>:         <span class="c"># I(i,0) = Infinity</span></pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">059</span>:         <span class="n">V_current</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">gapWeight</span> <span class="o">+</span> <span class="n">spaceWeight</span> <span class="o">*</span> <span class="n">i</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">053</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">054</span>:         <span class="c"># Base conditions</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">055</span>:         <span class="c"># V(i,0) = gapWeight + spaceWeight * i</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">056</span>:         <span class="c"># I(i,0) = Infinity</span></pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">057</span>:         <span class="n">V_current</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">gapWeight</span> <span class="o">+</span> <span class="n">spaceWeight</span> <span class="o">*</span> <span class="n">i</span></pre>
 <pre class='cython code score-0 '>    (__pyx_v_V_current[0]) = (__pyx_v_gapWeight + (__pyx_v_spaceWeight * __pyx_v_i));
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">060</span>:         <span class="n">I</span> <span class="o">=</span> <span class="n">limits</span><span class="o">.</span><span class="n">INT_MAX</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">058</span>:         <span class="n">I</span> <span class="o">=</span> <span class="n">limits</span><span class="o">.</span><span class="n">INT_MAX</span></pre>
 <pre class='cython code score-0 '>    __pyx_v_I = INT_MAX;
-</pre><pre class="cython line score-0">&#xA0;<span class="">061</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">062</span>:         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span> <span class="n">length1</span><span class="o">+</span><span class="mf">1</span><span class="p">)</span> <span class="p">:</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">059</span>: </pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">060</span>:         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span> <span class="n">length1</span><span class="o">+</span><span class="mf">1</span><span class="p">)</span> <span class="p">:</span></pre>
 <pre class='cython code score-0 '>    __pyx_t_5 = (__pyx_v_length1 + 1);
     __pyx_t_6 = __pyx_t_5;
     for (__pyx_t_8 = 1; __pyx_t_8 &lt; __pyx_t_6; __pyx_t_8+=1) {
       __pyx_v_j = __pyx_t_8;
-</pre><pre class="cython line score-0">&#xA0;<span class="">063</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">064</span>:             <span class="c"># I(i,j) is the edit distance if the jth character of string 1</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">065</span>:             <span class="c"># was inserted into string 2.</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">066</span>:             <span class="c">#</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">067</span>:             <span class="c"># I(i,j) = min(I(i,j-1), V(i,j-1) + gapWeight) + spaceWeight</span></pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">068</span>:             <span class="k">if</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">length2</span> <span class="p">:</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">061</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">062</span>:             <span class="c"># I(i,j) is the edit distance if the jth character of string 1</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">063</span>:             <span class="c"># was inserted into string 2.</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">064</span>:             <span class="c">#</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">065</span>:             <span class="c"># I(i,j) = min(I(i,j-1), V(i,j-1) + gapWeight) + spaceWeight</span></pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">066</span>:             <span class="k">if</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">length2</span> <span class="p">:</span></pre>
 <pre class='cython code score-0 '>      __pyx_t_9 = ((__pyx_v_j &lt;= __pyx_v_length2) != 0);
       if (__pyx_t_9) {
 /* … */
         goto __pyx_L11;
       }
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">069</span>:                 <span class="n">I</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">I</span><span class="p">,</span> <span class="n">V_current</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mf">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">gapWeight</span><span class="p">)</span> <span class="o">+</span> <span class="n">spaceWeight</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">067</span>:                 <span class="n">I</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">I</span><span class="p">,</span> <span class="n">V_current</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mf">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">gapWeight</span><span class="p">)</span> <span class="o">+</span> <span class="n">spaceWeight</span></pre>
 <pre class='cython code score-0 '>        __pyx_t_10 = ((__pyx_v_V_current[(__pyx_v_j - 1)]) + __pyx_v_gapWeight);
         __pyx_t_11 = __pyx_v_I;
         if (((__pyx_t_10 &lt; __pyx_t_11) != 0)) {
@@ -677,10 +653,10 @@ static PyObject *__pyx_pf_9affinegap_9affinegap_affineGapDistanceInputOrder(CYTH
           __pyx_t_12 = __pyx_t_11;
         }
         __pyx_v_I = (__pyx_t_12 + __pyx_v_spaceWeight);
-</pre><pre class="cython line score-0">&#xA0;<span class="">070</span>:             <span class="k">else</span> <span class="p">:</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">071</span>:                 <span class="c"># Pay less for abbreviations</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">072</span>:                 <span class="c"># i.e. &#39;spago (los angeles) to &#39;spago&#39;</span></pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">073</span>:                 <span class="n">I</span> <span class="o">=</span> <span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">I</span><span class="p">,</span> <span class="n">V_current</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mf">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">gapWeight</span> <span class="o">*</span> <span class="n">abbreviation_scale</span><span class="p">)</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">068</span>:             <span class="k">else</span> <span class="p">:</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">069</span>:                 <span class="c"># Pay less for abbreviations</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">070</span>:                 <span class="c"># i.e. &#39;spago (los angeles) to &#39;spago&#39;</span></pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">071</span>:                 <span class="n">I</span> <span class="o">=</span> <span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">I</span><span class="p">,</span> <span class="n">V_current</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mf">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">gapWeight</span> <span class="o">*</span> <span class="n">abbreviation_scale</span><span class="p">)</span></pre>
 <pre class='cython code score-0 '>        __pyx_t_10 = ((__pyx_v_V_current[(__pyx_v_j - 1)]) + (__pyx_v_gapWeight * __pyx_v_abbreviation_scale));
         __pyx_t_12 = __pyx_v_I;
         if (((__pyx_t_10 &lt; __pyx_t_12) != 0)) {
@@ -688,18 +664,18 @@ static PyObject *__pyx_pf_9affinegap_9affinegap_affineGapDistanceInputOrder(CYTH
         } else {
           __pyx_t_11 = __pyx_t_12;
         }
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">074</span>:                      <span class="o">+</span> <span class="n">spaceWeight</span> <span class="o">*</span> <span class="n">abbreviation_scale</span><span class="p">)</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">072</span>:                      <span class="o">+</span> <span class="n">spaceWeight</span> <span class="o">*</span> <span class="n">abbreviation_scale</span><span class="p">)</span></pre>
 <pre class='cython code score-0 '>      /*else*/ {
 /* … */
         __pyx_v_I = (__pyx_t_11 + (__pyx_v_spaceWeight * __pyx_v_abbreviation_scale));
       }
       __pyx_L11:;
-</pre><pre class="cython line score-0">&#xA0;<span class="">075</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">076</span>:             <span class="c"># D(i,j) is the edit distance if the ith character of string 2</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">077</span>:             <span class="c"># was deleted from string 1</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">078</span>:             <span class="c">#</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">079</span>:             <span class="c"># D(i,j) = min((i-1,j), V(i-1,j) + gapWeight) + spaceWeight</span></pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">080</span>:             <span class="n">D</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">D</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">V_previous</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="n">gapWeight</span><span class="p">)</span> <span class="o">+</span> <span class="n">spaceWeight</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">073</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">074</span>:             <span class="c"># D(i,j) is the edit distance if the ith character of string 2</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">075</span>:             <span class="c"># was deleted from string 1</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">076</span>:             <span class="c">#</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">077</span>:             <span class="c"># D(i,j) = min((i-1,j), V(i-1,j) + gapWeight) + spaceWeight</span></pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">078</span>:             <span class="n">D</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">D</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">V_previous</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="n">gapWeight</span><span class="p">)</span> <span class="o">+</span> <span class="n">spaceWeight</span></pre>
 <pre class='cython code score-0 '>      __pyx_t_10 = ((__pyx_v_V_previous[__pyx_v_j]) + __pyx_v_gapWeight);
       __pyx_t_13 = (__pyx_v_D[__pyx_v_j]);
       if (((__pyx_t_10 &lt; __pyx_t_13) != 0)) {
@@ -708,30 +684,30 @@ static PyObject *__pyx_pf_9affinegap_9affinegap_affineGapDistanceInputOrder(CYTH
         __pyx_t_14 = __pyx_t_13;
       }
       (__pyx_v_D[__pyx_v_j]) = (__pyx_t_14 + __pyx_v_spaceWeight);
-</pre><pre class="cython line score-0">&#xA0;<span class="">081</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">082</span>:             <span class="c"># M(i,j) is the edit distance if the ith and jth characters</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">083</span>:             <span class="c"># match or mismatch</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">084</span>:             <span class="c">#</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">085</span>:             <span class="c"># M(i,j) = V(i-1,j-1) + (matchWeight | misMatchWeight)</span></pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">086</span>:             <span class="k">if</span> <span class="n">int_ptr_2</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mf">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">int_ptr_1</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mf">1</span><span class="p">]</span> <span class="p">:</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">079</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">080</span>:             <span class="c"># M(i,j) is the edit distance if the ith and jth characters</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">081</span>:             <span class="c"># match or mismatch</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">082</span>:             <span class="c">#</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">083</span>:             <span class="c"># M(i,j) = V(i-1,j-1) + (matchWeight | misMatchWeight)</span></pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">084</span>:             <span class="k">if</span> <span class="n">int_ptr_2</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mf">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">int_ptr_1</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mf">1</span><span class="p">]</span> <span class="p">:</span></pre>
 <pre class='cython code score-0 '>      __pyx_t_9 = (((__pyx_v_int_ptr_2[(__pyx_v_i - 1)]) == (__pyx_v_int_ptr_1[(__pyx_v_j - 1)])) != 0);
       if (__pyx_t_9) {
 /* … */
         goto __pyx_L12;
       }
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">087</span>:                 <span class="n">M</span> <span class="o">=</span> <span class="n">V_previous</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mf">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">matchWeight</span></pre>
-<pre class='cython code score-0 '>        __pyx_v_M = ((__pyx_v_V_previous[(__pyx_v_j - 1)]) + __pyx_v_matchWeight);
-</pre><pre class="cython line score-0">&#xA0;<span class="">088</span>:             <span class="k">else</span><span class="p">:</span></pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">089</span>:                 <span class="n">M</span> <span class="o">=</span> <span class="n">V_previous</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mf">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">mismatchWeight</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">085</span>:                 <span class="n">M</span> <span class="o">=</span> <span class="n">V_previous</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mf">1</span><span class="p">]</span></pre>
+<pre class='cython code score-0 '>        __pyx_v_M = (__pyx_v_V_previous[(__pyx_v_j - 1)]);
+</pre><pre class="cython line score-0">&#xA0;<span class="">086</span>:             <span class="k">else</span><span class="p">:</span></pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">087</span>:                 <span class="n">M</span> <span class="o">=</span> <span class="n">V_previous</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mf">1</span><span class="p">]</span> <span class="o">+</span> <span class="mf">1</span></pre>
 <pre class='cython code score-0 '>      /*else*/ {
-        __pyx_v_M = ((__pyx_v_V_previous[(__pyx_v_j - 1)]) + __pyx_v_mismatchWeight);
+        __pyx_v_M = ((__pyx_v_V_previous[(__pyx_v_j - 1)]) + 1.0);
       }
       __pyx_L12:;
-</pre><pre class="cython line score-0">&#xA0;<span class="">090</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">091</span>:             <span class="c"># V(i,j) is the minimum edit distance</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">092</span>:             <span class="c">#</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">093</span>:             <span class="c"># V(i,j) = min(E(i,j), F(i,j), G(i,j))</span></pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">094</span>:             <span class="n">V_current</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">I</span><span class="p">,</span> <span class="n">D</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">M</span><span class="p">)</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">088</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">089</span>:             <span class="c"># V(i,j) is the minimum edit distance</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">090</span>:             <span class="c">#</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">091</span>:             <span class="c"># V(i,j) = min(E(i,j), F(i,j), G(i,j))</span></pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">092</span>:             <span class="n">V_current</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">I</span><span class="p">,</span> <span class="n">D</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">M</span><span class="p">)</span></pre>
 <pre class='cython code score-0 '>      __pyx_t_14 = (__pyx_v_D[__pyx_v_j]);
       __pyx_t_11 = __pyx_v_M;
       __pyx_t_12 = __pyx_v_I;
@@ -749,25 +725,25 @@ static PyObject *__pyx_pf_9affinegap_9affinegap_affineGapDistanceInputOrder(CYTH
       (__pyx_v_V_current[__pyx_v_j]) = __pyx_t_15;
     }
   }
-</pre><pre class="cython line score-0">&#xA0;<span class="">095</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">096</span>:     <span class="n">distance</span> <span class="o">=</span> <span class="n">V_current</span><span class="p">[</span><span class="n">length1</span><span class="p">]</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">093</span>: </pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">094</span>:     <span class="n">distance</span> <span class="o">=</span> <span class="n">V_current</span><span class="p">[</span><span class="n">length1</span><span class="p">]</span></pre>
 <pre class='cython code score-0 '>  __pyx_v_distance = (__pyx_v_V_current[__pyx_v_length1]);
-</pre><pre class="cython line score-0">&#xA0;<span class="">097</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">098</span>:     <span class="n">free</span><span class="p">(</span><span class="n">D</span><span class="p">)</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">095</span>: </pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">096</span>:     <span class="n">free</span><span class="p">(</span><span class="n">D</span><span class="p">)</span></pre>
 <pre class='cython code score-0 '>  free(__pyx_v_D);
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">099</span>:     <span class="n">free</span><span class="p">(</span><span class="n">V_current</span><span class="p">)</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">097</span>:     <span class="n">free</span><span class="p">(</span><span class="n">V_current</span><span class="p">)</span></pre>
 <pre class='cython code score-0 '>  free(__pyx_v_V_current);
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">100</span>:     <span class="n">free</span><span class="p">(</span><span class="n">V_previous</span><span class="p">)</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">098</span>:     <span class="n">free</span><span class="p">(</span><span class="n">V_previous</span><span class="p">)</span></pre>
 <pre class='cython code score-0 '>  free(__pyx_v_V_previous);
-</pre><pre class="cython line score-0">&#xA0;<span class="">101</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">102</span>:     <span class="k">return</span> <span class="n">distance</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">099</span>: </pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">100</span>:     <span class="k">return</span> <span class="n">distance</span></pre>
 <pre class='cython code score-0 '>  __pyx_r = __pyx_v_distance;
   goto __pyx_L0;
-</pre><pre class="cython line score-0">&#xA0;<span class="">103</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">104</span>: </pre>
-<pre class="cython line score-121" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">105</span>: <span class="k">cpdef</span> <span class="kt">float</span> <span class="nf">affineGapDistance</span><span class="p">(</span><span class="nb">int</span><span class="p">[::</span><span class="mf">1</span><span class="p">]</span> <span class="n">string_a</span><span class="p">,</span> <span class="nb">int</span><span class="p">[::</span><span class="mf">1</span><span class="p">]</span> <span class="n">string_b</span><span class="p">,</span></pre>
-<pre class='cython code score-121 '>static PyObject *__pyx_pw_9affinegap_9affinegap_3affineGapDistance(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static float __pyx_f_9affinegap_9affinegap_affineGapDistance(__Pyx_memviewslice __pyx_v_string_a, __Pyx_memviewslice __pyx_v_string_b, float const __pyx_v_matchWeight, float const __pyx_v_mismatchWeight, float const __pyx_v_gapWeight, float const __pyx_v_spaceWeight, float const __pyx_v_abbreviation_scale, CYTHON_UNUSED int __pyx_skip_dispatch) {
+</pre><pre class="cython line score-0">&#xA0;<span class="">101</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">102</span>: </pre>
+<pre class="cython line score-89" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">103</span>: <span class="k">cpdef</span> <span class="kt">float</span> <span class="nf">affineGapDistance</span><span class="p">(</span><span class="nb">int</span><span class="p">[::</span><span class="mf">1</span><span class="p">]</span> <span class="n">string_a</span><span class="p">,</span> <span class="nb">int</span><span class="p">[::</span><span class="mf">1</span><span class="p">]</span> <span class="n">string_b</span><span class="p">,</span></pre>
+<pre class='cython code score-89 '>static PyObject *__pyx_pw_9affinegap_9affinegap_3affineGapDistance(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static float __pyx_f_9affinegap_9affinegap_affineGapDistance(__Pyx_memviewslice __pyx_v_string_a, __Pyx_memviewslice __pyx_v_string_b, float const __pyx_v_gapWeight, float const __pyx_v_spaceWeight, float const __pyx_v_abbreviation_scale, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int __pyx_v_length1;
   int __pyx_v_length2;
   float __pyx_r;
@@ -786,8 +762,6 @@ static char __pyx_doc_9affinegap_9affinegap_2affineGapDistance[] = "\n    Calcul
 static PyObject *__pyx_pw_9affinegap_9affinegap_3affineGapDistance(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_string_a = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_string_b = { 0, 0, { 0 }, { 0 }, { 0 } };
-  float __pyx_v_matchWeight;
-  float __pyx_v_mismatchWeight;
   float __pyx_v_gapWeight;
   float __pyx_v_spaceWeight;
   float __pyx_v_abbreviation_scale;
@@ -795,16 +769,12 @@ static PyObject *__pyx_pw_9affinegap_9affinegap_3affineGapDistance(PyObject *__p
   <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
   <span class='refnanny'>__Pyx_RefNannySetupContext</span>("affineGapDistance (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&amp;__pyx_n_s_string_a,&amp;__pyx_n_s_string_b,&amp;__pyx_n_s_matchWeight,&amp;__pyx_n_s_mismatchWeight,&amp;__pyx_n_s_gapWeight,&amp;__pyx_n_s_spaceWeight,&amp;__pyx_n_s_abbreviation_scale,0};
-    PyObject* values[7] = {0,0,0,0,0,0,0};
+    static PyObject **__pyx_pyargnames[] = {&amp;__pyx_n_s_string_a,&amp;__pyx_n_s_string_b,&amp;__pyx_n_s_gapWeight,&amp;__pyx_n_s_spaceWeight,&amp;__pyx_n_s_abbreviation_scale,0};
+    PyObject* values[5] = {0,0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args);
       switch (pos_args) {
-        case  7: values[6] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 6);
-        CYTHON_FALLTHROUGH;
-        case  6: values[5] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 5);
-        CYTHON_FALLTHROUGH;
         case  5: values[4] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 4);
         CYTHON_FALLTHROUGH;
         case  4: values[3] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 3);
@@ -827,43 +797,31 @@ static PyObject *__pyx_pw_9affinegap_9affinegap_3affineGapDistance(PyObject *__p
         case  1:
         if (likely((values[1] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_string_b)) != 0)) kw_args--;
         else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistance", 1, 7, 7, 1); <span class='error_goto'>__PYX_ERR(0, 105, __pyx_L3_error)</span>
+          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistance", 1, 5, 5, 1); <span class='error_goto'>__PYX_ERR(0, 103, __pyx_L3_error)</span>
         }
         CYTHON_FALLTHROUGH;
         case  2:
-        if (likely((values[2] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_matchWeight)) != 0)) kw_args--;
+        if (likely((values[2] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_gapWeight)) != 0)) kw_args--;
         else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistance", 1, 7, 7, 2); <span class='error_goto'>__PYX_ERR(0, 105, __pyx_L3_error)</span>
+          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistance", 1, 5, 5, 2); <span class='error_goto'>__PYX_ERR(0, 103, __pyx_L3_error)</span>
         }
         CYTHON_FALLTHROUGH;
         case  3:
-        if (likely((values[3] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_mismatchWeight)) != 0)) kw_args--;
+        if (likely((values[3] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_spaceWeight)) != 0)) kw_args--;
         else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistance", 1, 7, 7, 3); <span class='error_goto'>__PYX_ERR(0, 105, __pyx_L3_error)</span>
+          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistance", 1, 5, 5, 3); <span class='error_goto'>__PYX_ERR(0, 103, __pyx_L3_error)</span>
         }
         CYTHON_FALLTHROUGH;
         case  4:
-        if (likely((values[4] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_gapWeight)) != 0)) kw_args--;
+        if (likely((values[4] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_abbreviation_scale)) != 0)) kw_args--;
         else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistance", 1, 7, 7, 4); <span class='error_goto'>__PYX_ERR(0, 105, __pyx_L3_error)</span>
-        }
-        CYTHON_FALLTHROUGH;
-        case  5:
-        if (likely((values[5] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_spaceWeight)) != 0)) kw_args--;
-        else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistance", 1, 7, 7, 5); <span class='error_goto'>__PYX_ERR(0, 105, __pyx_L3_error)</span>
-        }
-        CYTHON_FALLTHROUGH;
-        case  6:
-        if (likely((values[6] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_abbreviation_scale)) != 0)) kw_args--;
-        else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistance", 1, 7, 7, 6); <span class='error_goto'>__PYX_ERR(0, 105, __pyx_L3_error)</span>
+          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistance", 1, 5, 5, 4); <span class='error_goto'>__PYX_ERR(0, 103, __pyx_L3_error)</span>
         }
       }
       if (unlikely(kw_args &gt; 0)) {
-        if (unlikely(<span class='pyx_c_api'>__Pyx_ParseOptionalKeywords</span>(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "affineGapDistance") &lt; 0)) <span class='error_goto'>__PYX_ERR(0, 105, __pyx_L3_error)</span>
+        if (unlikely(<span class='pyx_c_api'>__Pyx_ParseOptionalKeywords</span>(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "affineGapDistance") &lt; 0)) <span class='error_goto'>__PYX_ERR(0, 103, __pyx_L3_error)</span>
       }
-    } else if (<span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args) != 7) {
+    } else if (<span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args) != 5) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 0);
@@ -871,26 +829,22 @@ static PyObject *__pyx_pw_9affinegap_9affinegap_3affineGapDistance(PyObject *__p
       values[2] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 2);
       values[3] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 3);
       values[4] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 4);
-      values[5] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 5);
-      values[6] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 6);
     }
-    __pyx_v_string_a = <span class='pyx_c_api'>__Pyx_PyObject_to_MemoryviewSlice_dc_int</span>(values[0], PyBUF_WRITABLE);<span class='error_goto'> if (unlikely(!__pyx_v_string_a.memview)) __PYX_ERR(0, 105, __pyx_L3_error)</span>
-    __pyx_v_string_b = <span class='pyx_c_api'>__Pyx_PyObject_to_MemoryviewSlice_dc_int</span>(values[1], PyBUF_WRITABLE);<span class='error_goto'> if (unlikely(!__pyx_v_string_b.memview)) __PYX_ERR(0, 105, __pyx_L3_error)</span>
-    __pyx_v_matchWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[2]); if (unlikely((__pyx_v_matchWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 106, __pyx_L3_error)</span>
-    __pyx_v_mismatchWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[3]); if (unlikely((__pyx_v_mismatchWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 107, __pyx_L3_error)</span>
-    __pyx_v_gapWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[4]); if (unlikely((__pyx_v_gapWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 108, __pyx_L3_error)</span>
-    __pyx_v_spaceWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[5]); if (unlikely((__pyx_v_spaceWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 109, __pyx_L3_error)</span>
-    __pyx_v_abbreviation_scale = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[6]); if (unlikely((__pyx_v_abbreviation_scale == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 110, __pyx_L3_error)</span>
+    __pyx_v_string_a = <span class='pyx_c_api'>__Pyx_PyObject_to_MemoryviewSlice_dc_int</span>(values[0], PyBUF_WRITABLE);<span class='error_goto'> if (unlikely(!__pyx_v_string_a.memview)) __PYX_ERR(0, 103, __pyx_L3_error)</span>
+    __pyx_v_string_b = <span class='pyx_c_api'>__Pyx_PyObject_to_MemoryviewSlice_dc_int</span>(values[1], PyBUF_WRITABLE);<span class='error_goto'> if (unlikely(!__pyx_v_string_b.memview)) __PYX_ERR(0, 103, __pyx_L3_error)</span>
+    __pyx_v_gapWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[2]); if (unlikely((__pyx_v_gapWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 104, __pyx_L3_error)</span>
+    __pyx_v_spaceWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[3]); if (unlikely((__pyx_v_spaceWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 105, __pyx_L3_error)</span>
+    __pyx_v_abbreviation_scale = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[4]); if (unlikely((__pyx_v_abbreviation_scale == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 106, __pyx_L3_error)</span>
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistance", 1, 7, 7, <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args)); <span class='error_goto'>__PYX_ERR(0, 105, __pyx_L3_error)</span>
+  <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affineGapDistance", 1, 5, 5, <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args)); <span class='error_goto'>__PYX_ERR(0, 103, __pyx_L3_error)</span>
   __pyx_L3_error:;
   <span class='pyx_c_api'>__Pyx_AddTraceback</span>("affinegap.affinegap.affineGapDistance", __pyx_clineno, __pyx_lineno, __pyx_filename);
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9affinegap_9affinegap_2affineGapDistance(__pyx_self, __pyx_v_string_a, __pyx_v_string_b, __pyx_v_matchWeight, __pyx_v_mismatchWeight, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale);
+  __pyx_r = __pyx_pf_9affinegap_9affinegap_2affineGapDistance(__pyx_self, __pyx_v_string_a, __pyx_v_string_b, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale);
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -900,14 +854,14 @@ static PyObject *__pyx_pw_9affinegap_9affinegap_3affineGapDistance(PyObject *__p
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9affinegap_9affinegap_2affineGapDistance(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_string_a, __Pyx_memviewslice __pyx_v_string_b, float __pyx_v_matchWeight, float __pyx_v_mismatchWeight, float __pyx_v_gapWeight, float __pyx_v_spaceWeight, float __pyx_v_abbreviation_scale) {
+static PyObject *__pyx_pf_9affinegap_9affinegap_2affineGapDistance(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_string_a, __Pyx_memviewslice __pyx_v_string_b, float __pyx_v_gapWeight, float __pyx_v_spaceWeight, float __pyx_v_abbreviation_scale) {
   PyObject *__pyx_r = NULL;
   <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
   <span class='refnanny'>__Pyx_RefNannySetupContext</span>("affineGapDistance", 0);
   <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
-  if (unlikely(!__pyx_v_string_a.memview)) { <span class='pyx_c_api'>__Pyx_RaiseUnboundLocalError</span>("string_a"); <span class='error_goto'>__PYX_ERR(0, 105, __pyx_L1_error)</span> }
-  if (unlikely(!__pyx_v_string_b.memview)) { <span class='pyx_c_api'>__Pyx_RaiseUnboundLocalError</span>("string_b"); <span class='error_goto'>__PYX_ERR(0, 105, __pyx_L1_error)</span> }
-  __pyx_t_1 = <span class='py_c_api'>PyFloat_FromDouble</span>(__pyx_f_9affinegap_9affinegap_affineGapDistance(__pyx_v_string_a, __pyx_v_string_b, __pyx_v_matchWeight, __pyx_v_mismatchWeight, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale, 0));<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 105, __pyx_L1_error)</span>
+  if (unlikely(!__pyx_v_string_a.memview)) { <span class='pyx_c_api'>__Pyx_RaiseUnboundLocalError</span>("string_a"); <span class='error_goto'>__PYX_ERR(0, 103, __pyx_L1_error)</span> }
+  if (unlikely(!__pyx_v_string_b.memview)) { <span class='pyx_c_api'>__Pyx_RaiseUnboundLocalError</span>("string_b"); <span class='error_goto'>__PYX_ERR(0, 103, __pyx_L1_error)</span> }
+  __pyx_t_1 = <span class='py_c_api'>PyFloat_FromDouble</span>(__pyx_f_9affinegap_9affinegap_affineGapDistance(__pyx_v_string_a, __pyx_v_string_b, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale, 0));<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 103, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -925,64 +879,53 @@ static PyObject *__pyx_pf_9affinegap_9affinegap_2affineGapDistance(CYTHON_UNUSED
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return __pyx_r;
 }
-</pre><pre class="cython line score-0">&#xA0;<span class="">106</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">matchWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">107</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">mismatchWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">108</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">gapWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">109</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">spaceWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">110</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">abbreviation_scale</span><span class="p">):</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">111</span>:     <span class="sd">&quot;&quot;&quot;</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">112</span>: <span class="sd">    Calculate the affine gap distance between two strings</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">113</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">114</span>: <span class="sd">    Default weights are from Alvaro Monge and Charles Elkan, 1996,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">115</span>: <span class="sd">    &quot;The field matching problem: Algorithms and applications&quot;</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">116</span>: <span class="sd">    http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.23.9685</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">117</span>: <span class="sd">    &quot;&quot;&quot;</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">118</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">119</span>:     <span class="k">cdef</span> <span class="kt">int</span> <span class="nf">length1</span> <span class="o">=</span> <span class="n">string_a</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">104</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">gapWeight</span><span class="p">,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">105</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">spaceWeight</span><span class="p">,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">106</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">abbreviation_scale</span><span class="p">):</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">107</span>:     <span class="sd">&quot;&quot;&quot;</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">108</span>: <span class="sd">    Calculate the affine gap distance between two strings</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">109</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">110</span>: <span class="sd">    Default weights are from Alvaro Monge and Charles Elkan, 1996,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">111</span>: <span class="sd">    &quot;The field matching problem: Algorithms and applications&quot;</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">112</span>: <span class="sd">    http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.23.9685</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">113</span>: <span class="sd">    &quot;&quot;&quot;</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">114</span>: </pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">115</span>:     <span class="k">cdef</span> <span class="kt">int</span> <span class="nf">length1</span> <span class="o">=</span> <span class="n">string_a</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span></pre>
 <pre class='cython code score-0 '>  __pyx_v_length1 = (__pyx_v_string_a.shape[0]);
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">120</span>:     <span class="k">cdef</span> <span class="kt">int</span> <span class="nf">length2</span> <span class="o">=</span> <span class="n">string_b</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">116</span>:     <span class="k">cdef</span> <span class="kt">int</span> <span class="nf">length2</span> <span class="o">=</span> <span class="n">string_b</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span></pre>
 <pre class='cython code score-0 '>  __pyx_v_length2 = (__pyx_v_string_b.shape[0]);
-</pre><pre class="cython line score-0">&#xA0;<span class="">121</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">122</span>:     <span class="c"># if (string_a == string_b and</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">123</span>:     <span class="c">#     matchWeight == min(matchWeight,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">124</span>:     <span class="c">#                        mismatchWeight,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">125</span>:     <span class="c">#                        gapWeight)):</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">126</span>:     <span class="c">#     return matchWeight * length1</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">127</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">128</span>:     <span class="k">if</span> <span class="n">length1</span> <span class="o">&lt;</span> <span class="n">length2</span> <span class="p">:</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">117</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">118</span>: </pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">119</span>:     <span class="k">if</span> <span class="n">length1</span> <span class="o">&lt;</span> <span class="n">length2</span> <span class="p">:</span></pre>
 <pre class='cython code score-0 '>  __pyx_t_1 = ((__pyx_v_length1 &lt; __pyx_v_length2) != 0);
   if (__pyx_t_1) {
 /* … */
   }
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">129</span>:         <span class="k">return</span> <span class="n">affineGapDistanceInputOrder</span><span class="p">(</span><span class="n">string_b</span><span class="p">,</span> <span class="n">string_a</span><span class="p">,</span></pre>
-<pre class='cython code score-0 '>    __pyx_r = __pyx_f_9affinegap_9affinegap_affineGapDistanceInputOrder(__pyx_v_string_b, __pyx_v_string_a, __pyx_v_length2, __pyx_v_length1, __pyx_v_matchWeight, __pyx_v_mismatchWeight, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale, 0);
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">120</span>:         <span class="k">return</span> <span class="n">affineGapDistanceInputOrder</span><span class="p">(</span><span class="n">string_b</span><span class="p">,</span> <span class="n">string_a</span><span class="p">,</span></pre>
+<pre class='cython code score-0 '>    __pyx_r = __pyx_f_9affinegap_9affinegap_affineGapDistanceInputOrder(__pyx_v_string_b, __pyx_v_string_a, __pyx_v_length2, __pyx_v_length1, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale, 0);
     goto __pyx_L0;
-</pre><pre class="cython line score-0">&#xA0;<span class="">130</span>:                               <span class="n">length2</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">131</span>:                               <span class="n">length1</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">132</span>:                               <span class="n">matchWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">133</span>:                               <span class="n">mismatchWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">134</span>:                               <span class="n">gapWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">135</span>:                               <span class="n">spaceWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">136</span>:                               <span class="n">abbreviation_scale</span><span class="p">)</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">137</span>:     <span class="k">else</span><span class="p">:</span></pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">138</span>:         <span class="k">return</span> <span class="n">affineGapDistanceInputOrder</span><span class="p">(</span><span class="n">string_a</span><span class="p">,</span> <span class="n">string_b</span><span class="p">,</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">121</span>:                               <span class="n">length2</span><span class="p">,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">122</span>:                               <span class="n">length1</span><span class="p">,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">123</span>:                               <span class="n">gapWeight</span><span class="p">,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">124</span>:                               <span class="n">spaceWeight</span><span class="p">,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">125</span>:                               <span class="n">abbreviation_scale</span><span class="p">)</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">126</span>:     <span class="k">else</span><span class="p">:</span></pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">127</span>:         <span class="k">return</span> <span class="n">affineGapDistanceInputOrder</span><span class="p">(</span><span class="n">string_a</span><span class="p">,</span> <span class="n">string_b</span><span class="p">,</span></pre>
 <pre class='cython code score-0 '>  /*else*/ {
 /* … */
-    __pyx_r = __pyx_f_9affinegap_9affinegap_affineGapDistanceInputOrder(__pyx_v_string_a, __pyx_v_string_b, __pyx_v_length1, __pyx_v_length2, __pyx_v_matchWeight, __pyx_v_mismatchWeight, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale, 0);
+    __pyx_r = __pyx_f_9affinegap_9affinegap_affineGapDistanceInputOrder(__pyx_v_string_a, __pyx_v_string_b, __pyx_v_length1, __pyx_v_length2, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale, 0);
     goto __pyx_L0;
   }
-</pre><pre class="cython line score-0">&#xA0;<span class="">139</span>:                               <span class="n">length1</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">140</span>:                               <span class="n">length2</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">141</span>:                               <span class="n">matchWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">142</span>:                               <span class="n">mismatchWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">143</span>:                               <span class="n">gapWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">144</span>:                               <span class="n">spaceWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">145</span>:                               <span class="n">abbreviation_scale</span><span class="p">)</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">146</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">147</span>: </pre>
-<pre class="cython line score-129" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">148</span>: <span class="k">cpdef</span> <span class="kt">float</span> <span class="nf">normalizedAffineGapDistance</span><span class="p">(</span><span class="nb">int</span><span class="p">[::</span><span class="mf">1</span><span class="p">]</span> <span class="n">string_a</span><span class="p">,</span> <span class="nb">int</span><span class="p">[::</span><span class="mf">1</span><span class="p">]</span> <span class="n">string_b</span><span class="p">,</span></pre>
-<pre class='cython code score-129 '>static PyObject *__pyx_pw_9affinegap_9affinegap_5normalizedAffineGapDistance(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static float __pyx_f_9affinegap_9affinegap_normalizedAffineGapDistance(__Pyx_memviewslice __pyx_v_string_a, __Pyx_memviewslice __pyx_v_string_b, float const __pyx_v_matchWeight, float const __pyx_v_mismatchWeight, float const __pyx_v_gapWeight, float const __pyx_v_spaceWeight, float const __pyx_v_abbreviation_scale, CYTHON_UNUSED int __pyx_skip_dispatch) {
+</pre><pre class="cython line score-0">&#xA0;<span class="">128</span>:                               <span class="n">length1</span><span class="p">,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">129</span>:                               <span class="n">length2</span><span class="p">,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">130</span>:                               <span class="n">gapWeight</span><span class="p">,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">131</span>:                               <span class="n">spaceWeight</span><span class="p">,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">132</span>:                               <span class="n">abbreviation_scale</span><span class="p">)</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">133</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">134</span>: </pre>
+<pre class="cython line score-97" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">135</span>: <span class="k">cpdef</span> <span class="kt">float</span> <span class="nf">normalizedAffineGapDistance</span><span class="p">(</span><span class="nb">int</span><span class="p">[::</span><span class="mf">1</span><span class="p">]</span> <span class="n">string_a</span><span class="p">,</span> <span class="nb">int</span><span class="p">[::</span><span class="mf">1</span><span class="p">]</span> <span class="n">string_b</span><span class="p">,</span></pre>
+<pre class='cython code score-97 '>static PyObject *__pyx_pw_9affinegap_9affinegap_5normalizedAffineGapDistance(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static float __pyx_f_9affinegap_9affinegap_normalizedAffineGapDistance(__Pyx_memviewslice __pyx_v_string_a, __Pyx_memviewslice __pyx_v_string_b, float const __pyx_v_gapWeight, float const __pyx_v_spaceWeight, float const __pyx_v_abbreviation_scale, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int __pyx_v_length1;
   int __pyx_v_length2;
   float __pyx_v_normalizer;
@@ -1006,8 +949,6 @@ static PyObject *__pyx_pw_9affinegap_9affinegap_5normalizedAffineGapDistance(PyO
 static PyObject *__pyx_pw_9affinegap_9affinegap_5normalizedAffineGapDistance(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_string_a = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_string_b = { 0, 0, { 0 }, { 0 }, { 0 } };
-  float __pyx_v_matchWeight;
-  float __pyx_v_mismatchWeight;
   float __pyx_v_gapWeight;
   float __pyx_v_spaceWeight;
   float __pyx_v_abbreviation_scale;
@@ -1015,16 +956,12 @@ static PyObject *__pyx_pw_9affinegap_9affinegap_5normalizedAffineGapDistance(PyO
   <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
   <span class='refnanny'>__Pyx_RefNannySetupContext</span>("normalizedAffineGapDistance (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&amp;__pyx_n_s_string_a,&amp;__pyx_n_s_string_b,&amp;__pyx_n_s_matchWeight,&amp;__pyx_n_s_mismatchWeight,&amp;__pyx_n_s_gapWeight,&amp;__pyx_n_s_spaceWeight,&amp;__pyx_n_s_abbreviation_scale,0};
-    PyObject* values[7] = {0,0,0,0,0,0,0};
+    static PyObject **__pyx_pyargnames[] = {&amp;__pyx_n_s_string_a,&amp;__pyx_n_s_string_b,&amp;__pyx_n_s_gapWeight,&amp;__pyx_n_s_spaceWeight,&amp;__pyx_n_s_abbreviation_scale,0};
+    PyObject* values[5] = {0,0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args);
       switch (pos_args) {
-        case  7: values[6] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 6);
-        CYTHON_FALLTHROUGH;
-        case  6: values[5] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 5);
-        CYTHON_FALLTHROUGH;
         case  5: values[4] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 4);
         CYTHON_FALLTHROUGH;
         case  4: values[3] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 3);
@@ -1047,43 +984,31 @@ static PyObject *__pyx_pw_9affinegap_9affinegap_5normalizedAffineGapDistance(PyO
         case  1:
         if (likely((values[1] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_string_b)) != 0)) kw_args--;
         else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("normalizedAffineGapDistance", 1, 7, 7, 1); <span class='error_goto'>__PYX_ERR(0, 148, __pyx_L3_error)</span>
+          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("normalizedAffineGapDistance", 1, 5, 5, 1); <span class='error_goto'>__PYX_ERR(0, 135, __pyx_L3_error)</span>
         }
         CYTHON_FALLTHROUGH;
         case  2:
-        if (likely((values[2] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_matchWeight)) != 0)) kw_args--;
+        if (likely((values[2] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_gapWeight)) != 0)) kw_args--;
         else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("normalizedAffineGapDistance", 1, 7, 7, 2); <span class='error_goto'>__PYX_ERR(0, 148, __pyx_L3_error)</span>
+          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("normalizedAffineGapDistance", 1, 5, 5, 2); <span class='error_goto'>__PYX_ERR(0, 135, __pyx_L3_error)</span>
         }
         CYTHON_FALLTHROUGH;
         case  3:
-        if (likely((values[3] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_mismatchWeight)) != 0)) kw_args--;
+        if (likely((values[3] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_spaceWeight)) != 0)) kw_args--;
         else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("normalizedAffineGapDistance", 1, 7, 7, 3); <span class='error_goto'>__PYX_ERR(0, 148, __pyx_L3_error)</span>
+          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("normalizedAffineGapDistance", 1, 5, 5, 3); <span class='error_goto'>__PYX_ERR(0, 135, __pyx_L3_error)</span>
         }
         CYTHON_FALLTHROUGH;
         case  4:
-        if (likely((values[4] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_gapWeight)) != 0)) kw_args--;
+        if (likely((values[4] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_abbreviation_scale)) != 0)) kw_args--;
         else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("normalizedAffineGapDistance", 1, 7, 7, 4); <span class='error_goto'>__PYX_ERR(0, 148, __pyx_L3_error)</span>
-        }
-        CYTHON_FALLTHROUGH;
-        case  5:
-        if (likely((values[5] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_spaceWeight)) != 0)) kw_args--;
-        else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("normalizedAffineGapDistance", 1, 7, 7, 5); <span class='error_goto'>__PYX_ERR(0, 148, __pyx_L3_error)</span>
-        }
-        CYTHON_FALLTHROUGH;
-        case  6:
-        if (likely((values[6] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_abbreviation_scale)) != 0)) kw_args--;
-        else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("normalizedAffineGapDistance", 1, 7, 7, 6); <span class='error_goto'>__PYX_ERR(0, 148, __pyx_L3_error)</span>
+          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("normalizedAffineGapDistance", 1, 5, 5, 4); <span class='error_goto'>__PYX_ERR(0, 135, __pyx_L3_error)</span>
         }
       }
       if (unlikely(kw_args &gt; 0)) {
-        if (unlikely(<span class='pyx_c_api'>__Pyx_ParseOptionalKeywords</span>(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "normalizedAffineGapDistance") &lt; 0)) <span class='error_goto'>__PYX_ERR(0, 148, __pyx_L3_error)</span>
+        if (unlikely(<span class='pyx_c_api'>__Pyx_ParseOptionalKeywords</span>(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "normalizedAffineGapDistance") &lt; 0)) <span class='error_goto'>__PYX_ERR(0, 135, __pyx_L3_error)</span>
       }
-    } else if (<span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args) != 7) {
+    } else if (<span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args) != 5) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 0);
@@ -1091,26 +1016,22 @@ static PyObject *__pyx_pw_9affinegap_9affinegap_5normalizedAffineGapDistance(PyO
       values[2] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 2);
       values[3] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 3);
       values[4] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 4);
-      values[5] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 5);
-      values[6] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 6);
     }
-    __pyx_v_string_a = <span class='pyx_c_api'>__Pyx_PyObject_to_MemoryviewSlice_dc_int</span>(values[0], PyBUF_WRITABLE);<span class='error_goto'> if (unlikely(!__pyx_v_string_a.memview)) __PYX_ERR(0, 148, __pyx_L3_error)</span>
-    __pyx_v_string_b = <span class='pyx_c_api'>__Pyx_PyObject_to_MemoryviewSlice_dc_int</span>(values[1], PyBUF_WRITABLE);<span class='error_goto'> if (unlikely(!__pyx_v_string_b.memview)) __PYX_ERR(0, 148, __pyx_L3_error)</span>
-    __pyx_v_matchWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[2]); if (unlikely((__pyx_v_matchWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 149, __pyx_L3_error)</span>
-    __pyx_v_mismatchWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[3]); if (unlikely((__pyx_v_mismatchWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 150, __pyx_L3_error)</span>
-    __pyx_v_gapWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[4]); if (unlikely((__pyx_v_gapWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 151, __pyx_L3_error)</span>
-    __pyx_v_spaceWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[5]); if (unlikely((__pyx_v_spaceWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 152, __pyx_L3_error)</span>
-    __pyx_v_abbreviation_scale = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[6]); if (unlikely((__pyx_v_abbreviation_scale == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 153, __pyx_L3_error)</span>
+    __pyx_v_string_a = <span class='pyx_c_api'>__Pyx_PyObject_to_MemoryviewSlice_dc_int</span>(values[0], PyBUF_WRITABLE);<span class='error_goto'> if (unlikely(!__pyx_v_string_a.memview)) __PYX_ERR(0, 135, __pyx_L3_error)</span>
+    __pyx_v_string_b = <span class='pyx_c_api'>__Pyx_PyObject_to_MemoryviewSlice_dc_int</span>(values[1], PyBUF_WRITABLE);<span class='error_goto'> if (unlikely(!__pyx_v_string_b.memview)) __PYX_ERR(0, 135, __pyx_L3_error)</span>
+    __pyx_v_gapWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[2]); if (unlikely((__pyx_v_gapWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 136, __pyx_L3_error)</span>
+    __pyx_v_spaceWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[3]); if (unlikely((__pyx_v_spaceWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 137, __pyx_L3_error)</span>
+    __pyx_v_abbreviation_scale = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[4]); if (unlikely((__pyx_v_abbreviation_scale == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 138, __pyx_L3_error)</span>
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("normalizedAffineGapDistance", 1, 7, 7, <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args)); <span class='error_goto'>__PYX_ERR(0, 148, __pyx_L3_error)</span>
+  <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("normalizedAffineGapDistance", 1, 5, 5, <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args)); <span class='error_goto'>__PYX_ERR(0, 135, __pyx_L3_error)</span>
   __pyx_L3_error:;
   <span class='pyx_c_api'>__Pyx_AddTraceback</span>("affinegap.affinegap.normalizedAffineGapDistance", __pyx_clineno, __pyx_lineno, __pyx_filename);
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9affinegap_9affinegap_4normalizedAffineGapDistance(__pyx_self, __pyx_v_string_a, __pyx_v_string_b, __pyx_v_matchWeight, __pyx_v_mismatchWeight, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale);
+  __pyx_r = __pyx_pf_9affinegap_9affinegap_4normalizedAffineGapDistance(__pyx_self, __pyx_v_string_a, __pyx_v_string_b, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale);
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -1120,15 +1041,15 @@ static PyObject *__pyx_pw_9affinegap_9affinegap_5normalizedAffineGapDistance(PyO
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9affinegap_9affinegap_4normalizedAffineGapDistance(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_string_a, __Pyx_memviewslice __pyx_v_string_b, float __pyx_v_matchWeight, float __pyx_v_mismatchWeight, float __pyx_v_gapWeight, float __pyx_v_spaceWeight, float __pyx_v_abbreviation_scale) {
+static PyObject *__pyx_pf_9affinegap_9affinegap_4normalizedAffineGapDistance(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_string_a, __Pyx_memviewslice __pyx_v_string_b, float __pyx_v_gapWeight, float __pyx_v_spaceWeight, float __pyx_v_abbreviation_scale) {
   PyObject *__pyx_r = NULL;
   <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
   <span class='refnanny'>__Pyx_RefNannySetupContext</span>("normalizedAffineGapDistance", 0);
   <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
-  if (unlikely(!__pyx_v_string_a.memview)) { <span class='pyx_c_api'>__Pyx_RaiseUnboundLocalError</span>("string_a"); <span class='error_goto'>__PYX_ERR(0, 148, __pyx_L1_error)</span> }
-  if (unlikely(!__pyx_v_string_b.memview)) { <span class='pyx_c_api'>__Pyx_RaiseUnboundLocalError</span>("string_b"); <span class='error_goto'>__PYX_ERR(0, 148, __pyx_L1_error)</span> }
-  __pyx_t_1 = __pyx_f_9affinegap_9affinegap_normalizedAffineGapDistance(__pyx_v_string_a, __pyx_v_string_b, __pyx_v_matchWeight, __pyx_v_mismatchWeight, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale, 0); if (unlikely(__pyx_t_1 == ((float)999.0) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 148, __pyx_L1_error)</span>
-  __pyx_t_2 = <span class='py_c_api'>PyFloat_FromDouble</span>(__pyx_t_1);<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 148, __pyx_L1_error)</span>
+  if (unlikely(!__pyx_v_string_a.memview)) { <span class='pyx_c_api'>__Pyx_RaiseUnboundLocalError</span>("string_a"); <span class='error_goto'>__PYX_ERR(0, 135, __pyx_L1_error)</span> }
+  if (unlikely(!__pyx_v_string_b.memview)) { <span class='pyx_c_api'>__Pyx_RaiseUnboundLocalError</span>("string_b"); <span class='error_goto'>__PYX_ERR(0, 135, __pyx_L1_error)</span> }
+  __pyx_t_1 = __pyx_f_9affinegap_9affinegap_normalizedAffineGapDistance(__pyx_v_string_a, __pyx_v_string_b, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale, 0); if (unlikely(__pyx_t_1 == ((float)999.0) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 135, __pyx_L1_error)</span>
+  __pyx_t_2 = <span class='py_c_api'>PyFloat_FromDouble</span>(__pyx_t_1);<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 135, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -1146,51 +1067,47 @@ static PyObject *__pyx_pf_9affinegap_9affinegap_4normalizedAffineGapDistance(CYT
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return __pyx_r;
 }
-</pre><pre class="cython line score-0">&#xA0;<span class="">149</span>:                                         <span class="n">const</span> <span class="nb">float</span> <span class="n">matchWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">150</span>:                                         <span class="n">const</span> <span class="nb">float</span> <span class="n">mismatchWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">151</span>:                                         <span class="n">const</span> <span class="nb">float</span> <span class="n">gapWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">152</span>:                                         <span class="n">const</span> <span class="nb">float</span> <span class="n">spaceWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">153</span>:                                         <span class="n">const</span> <span class="nb">float</span> <span class="n">abbreviation_scale</span><span class="p">)</span> <span class="k">except</span><span class="o">?</span> <span class="mf">999</span> <span class="p">:</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">154</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">155</span>:     <span class="k">cdef</span> <span class="kt">int</span> <span class="nf">length1</span> <span class="o">=</span> <span class="n">string_a</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">136</span>:                                         <span class="n">const</span> <span class="nb">float</span> <span class="n">gapWeight</span><span class="p">,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">137</span>:                                         <span class="n">const</span> <span class="nb">float</span> <span class="n">spaceWeight</span><span class="p">,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">138</span>:                                         <span class="n">const</span> <span class="nb">float</span> <span class="n">abbreviation_scale</span><span class="p">)</span> <span class="k">except</span><span class="o">?</span> <span class="mf">999</span> <span class="p">:</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">139</span>: </pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">140</span>:     <span class="k">cdef</span> <span class="kt">int</span> <span class="nf">length1</span> <span class="o">=</span> <span class="n">string_a</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span></pre>
 <pre class='cython code score-0 '>  __pyx_v_length1 = (__pyx_v_string_a.shape[0]);
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">156</span>:     <span class="k">cdef</span> <span class="kt">int</span> <span class="nf">length2</span> <span class="o">=</span> <span class="n">string_b</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">141</span>:     <span class="k">cdef</span> <span class="kt">int</span> <span class="nf">length2</span> <span class="o">=</span> <span class="n">string_b</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span></pre>
 <pre class='cython code score-0 '>  __pyx_v_length2 = (__pyx_v_string_b.shape[0]);
-</pre><pre class="cython line score-0">&#xA0;<span class="">157</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">158</span>:     <span class="k">cdef</span> <span class="kt">float</span> <span class="nf">normalizer</span> <span class="o">=</span> <span class="n">length1</span> <span class="o">+</span> <span class="n">length2</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">142</span>: </pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">143</span>:     <span class="k">cdef</span> <span class="kt">float</span> <span class="nf">normalizer</span> <span class="o">=</span> <span class="n">length1</span> <span class="o">+</span> <span class="n">length2</span></pre>
 <pre class='cython code score-0 '>  __pyx_v_normalizer = (__pyx_v_length1 + __pyx_v_length2);
-</pre><pre class="cython line score-0">&#xA0;<span class="">159</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">160</span>:     <span class="k">if</span> <span class="n">normalizer</span> <span class="o">==</span> <span class="mf">0</span><span class="p">:</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">144</span>: </pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">145</span>:     <span class="k">if</span> <span class="n">normalizer</span> <span class="o">==</span> <span class="mf">0</span><span class="p">:</span></pre>
 <pre class='cython code score-0 '>  __pyx_t_1 = ((__pyx_v_normalizer == 0.0) != 0);
   if (unlikely(__pyx_t_1)) {
 /* … */
   }
-</pre><pre class="cython line score-10" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">161</span>:         <span class="k">raise</span> <span class="ne">ZeroDivisionError</span><span class="p">(</span><span class="s">&#39;normalizedAffineGapDistance cannot take two empty strings&#39;</span><span class="p">)</span></pre>
-<pre class='cython code score-10 '>    __pyx_t_2 = <span class='pyx_c_api'>__Pyx_PyObject_Call</span>(__pyx_builtin_ZeroDivisionError, __pyx_tuple_, NULL);<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 161, __pyx_L1_error)</span>
+</pre><pre class="cython line score-10" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">146</span>:         <span class="k">raise</span> <span class="ne">ZeroDivisionError</span><span class="p">(</span><span class="s">&#39;normalizedAffineGapDistance cannot take two empty strings&#39;</span><span class="p">)</span></pre>
+<pre class='cython code score-10 '>    __pyx_t_2 = <span class='pyx_c_api'>__Pyx_PyObject_Call</span>(__pyx_builtin_ZeroDivisionError, __pyx_tuple_, NULL);<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 146, __pyx_L1_error)</span>
     <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
     <span class='pyx_c_api'>__Pyx_Raise</span>(__pyx_t_2, 0, 0, 0);
     <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_2); __pyx_t_2 = 0;
-    <span class='error_goto'>__PYX_ERR(0, 161, __pyx_L1_error)</span>
+    <span class='error_goto'>__PYX_ERR(0, 146, __pyx_L1_error)</span>
 /* … */
-  __pyx_tuple_ = <span class='py_c_api'>PyTuple_Pack</span>(1, __pyx_kp_u_normalizedAffineGapDistance_cann);<span class='error_goto'> if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 161, __pyx_L1_error)</span>
+  __pyx_tuple_ = <span class='py_c_api'>PyTuple_Pack</span>(1, __pyx_kp_u_normalizedAffineGapDistance_cann);<span class='error_goto'> if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 146, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_tuple_);
   <span class='refnanny'>__Pyx_GIVEREF</span>(__pyx_tuple_);
-</pre><pre class="cython line score-0">&#xA0;<span class="">162</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">163</span>:     <span class="k">cdef</span> <span class="kt">float</span> <span class="nf">distance</span> <span class="o">=</span> <span class="n">affineGapDistance</span><span class="p">(</span><span class="n">string_a</span><span class="p">,</span> <span class="n">string_b</span><span class="p">,</span></pre>
-<pre class='cython code score-0 '>  __pyx_v_distance = __pyx_f_9affinegap_9affinegap_affineGapDistance(__pyx_v_string_a, __pyx_v_string_b, __pyx_v_matchWeight, __pyx_v_mismatchWeight, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale, 0);
-</pre><pre class="cython line score-0">&#xA0;<span class="">164</span>:                                             <span class="n">matchWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">165</span>:                                             <span class="n">mismatchWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">166</span>:                                             <span class="n">gapWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">167</span>:                                             <span class="n">spaceWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">168</span>:                                             <span class="n">abbreviation_scale</span><span class="p">)</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">169</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">170</span>:     <span class="k">return</span> <span class="n">distance</span><span class="o">/</span><span class="n">normalizer</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">147</span>: </pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">148</span>:     <span class="k">cdef</span> <span class="kt">float</span> <span class="nf">distance</span> <span class="o">=</span> <span class="n">affineGapDistance</span><span class="p">(</span><span class="n">string_a</span><span class="p">,</span> <span class="n">string_b</span><span class="p">,</span></pre>
+<pre class='cython code score-0 '>  __pyx_v_distance = __pyx_f_9affinegap_9affinegap_affineGapDistance(__pyx_v_string_a, __pyx_v_string_b, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale, 0);
+</pre><pre class="cython line score-0">&#xA0;<span class="">149</span>:                                             <span class="n">gapWeight</span><span class="p">,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">150</span>:                                             <span class="n">spaceWeight</span><span class="p">,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">151</span>:                                             <span class="n">abbreviation_scale</span><span class="p">)</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">152</span>: </pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">153</span>:     <span class="k">return</span> <span class="n">distance</span><span class="o">/</span><span class="n">normalizer</span></pre>
 <pre class='cython code score-0 '>  __pyx_r = (__pyx_v_distance / __pyx_v_normalizer);
   goto __pyx_L0;
-</pre><pre class="cython line score-0">&#xA0;<span class="">171</span>: </pre>
-<pre class="cython line score-108" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">172</span>: <span class="k">cpdef</span> <span class="kt">vector</span>[<span class="kt">float</span>] <span class="nf">affinaGapDistanceArray</span><span class="p">(</span><span class="n">vector</span><span class="p">[</span><span class="nb">int</span><span class="p">[::</span><span class="mf">1</span><span class="p">]]</span> <span class="n">strings</span><span class="p">,</span></pre>
-<pre class='cython code score-108 '>static PyObject *__pyx_pw_9affinegap_9affinegap_7affinaGapDistanceArray(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static std::vector&lt;float&gt;  __pyx_f_9affinegap_9affinegap_affinaGapDistanceArray(std::vector&lt;__Pyx_memviewslice&gt;  __pyx_v_strings, float const __pyx_v_matchWeight, float const __pyx_v_mismatchWeight, float const __pyx_v_gapWeight, float const __pyx_v_spaceWeight, float const __pyx_v_abbreviation_scale, CYTHON_UNUSED int __pyx_skip_dispatch) {
+</pre><pre class="cython line score-0">&#xA0;<span class="">154</span>: </pre>
+<pre class="cython line score-76" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">155</span>: <span class="k">cpdef</span> <span class="kt">vector</span>[<span class="kt">float</span>] <span class="nf">affinaGapDistanceArray</span><span class="p">(</span><span class="n">vector</span><span class="p">[</span><span class="nb">int</span><span class="p">[::</span><span class="mf">1</span><span class="p">]]</span> <span class="n">strings</span><span class="p">,</span></pre>
+<pre class='cython code score-76 '>static PyObject *__pyx_pw_9affinegap_9affinegap_7affinaGapDistanceArray(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static std::vector&lt;float&gt;  __pyx_f_9affinegap_9affinegap_affinaGapDistanceArray(std::vector&lt;__Pyx_memviewslice&gt;  __pyx_v_strings, float const __pyx_v_gapWeight, float const __pyx_v_spaceWeight, float const __pyx_v_abbreviation_scale, CYTHON_UNUSED int __pyx_skip_dispatch) {
   std::vector&lt;__Pyx_memviewslice&gt; ::size_type __pyx_v_len_list_strings;
   std::vector&lt;__Pyx_memviewslice&gt; ::size_type __pyx_v_size;
   std::vector&lt;float&gt;  __pyx_v_out;
@@ -1214,8 +1131,6 @@ static std::vector&lt;float&gt;  __pyx_f_9affinegap_9affinegap_affinaGapDistance
 static PyObject *__pyx_pw_9affinegap_9affinegap_7affinaGapDistanceArray(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyObject *__pyx_pw_9affinegap_9affinegap_7affinaGapDistanceArray(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   std::vector&lt;__Pyx_memviewslice&gt;  __pyx_v_strings;
-  float __pyx_v_matchWeight;
-  float __pyx_v_mismatchWeight;
   float __pyx_v_gapWeight;
   float __pyx_v_spaceWeight;
   float __pyx_v_abbreviation_scale;
@@ -1223,16 +1138,12 @@ static PyObject *__pyx_pw_9affinegap_9affinegap_7affinaGapDistanceArray(PyObject
   <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
   <span class='refnanny'>__Pyx_RefNannySetupContext</span>("affinaGapDistanceArray (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&amp;__pyx_n_s_strings,&amp;__pyx_n_s_matchWeight,&amp;__pyx_n_s_mismatchWeight,&amp;__pyx_n_s_gapWeight,&amp;__pyx_n_s_spaceWeight,&amp;__pyx_n_s_abbreviation_scale,0};
-    PyObject* values[6] = {0,0,0,0,0,0};
+    static PyObject **__pyx_pyargnames[] = {&amp;__pyx_n_s_strings,&amp;__pyx_n_s_gapWeight,&amp;__pyx_n_s_spaceWeight,&amp;__pyx_n_s_abbreviation_scale,0};
+    PyObject* values[4] = {0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args);
       switch (pos_args) {
-        case  6: values[5] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 5);
-        CYTHON_FALLTHROUGH;
-        case  5: values[4] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 4);
-        CYTHON_FALLTHROUGH;
         case  4: values[3] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 3);
         CYTHON_FALLTHROUGH;
         case  3: values[2] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 2);
@@ -1251,64 +1162,48 @@ static PyObject *__pyx_pw_9affinegap_9affinegap_7affinaGapDistanceArray(PyObject
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
-        if (likely((values[1] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_matchWeight)) != 0)) kw_args--;
+        if (likely((values[1] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_gapWeight)) != 0)) kw_args--;
         else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affinaGapDistanceArray", 1, 6, 6, 1); <span class='error_goto'>__PYX_ERR(0, 172, __pyx_L3_error)</span>
+          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affinaGapDistanceArray", 1, 4, 4, 1); <span class='error_goto'>__PYX_ERR(0, 155, __pyx_L3_error)</span>
         }
         CYTHON_FALLTHROUGH;
         case  2:
-        if (likely((values[2] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_mismatchWeight)) != 0)) kw_args--;
+        if (likely((values[2] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_spaceWeight)) != 0)) kw_args--;
         else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affinaGapDistanceArray", 1, 6, 6, 2); <span class='error_goto'>__PYX_ERR(0, 172, __pyx_L3_error)</span>
+          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affinaGapDistanceArray", 1, 4, 4, 2); <span class='error_goto'>__PYX_ERR(0, 155, __pyx_L3_error)</span>
         }
         CYTHON_FALLTHROUGH;
         case  3:
-        if (likely((values[3] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_gapWeight)) != 0)) kw_args--;
+        if (likely((values[3] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_abbreviation_scale)) != 0)) kw_args--;
         else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affinaGapDistanceArray", 1, 6, 6, 3); <span class='error_goto'>__PYX_ERR(0, 172, __pyx_L3_error)</span>
-        }
-        CYTHON_FALLTHROUGH;
-        case  4:
-        if (likely((values[4] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_spaceWeight)) != 0)) kw_args--;
-        else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affinaGapDistanceArray", 1, 6, 6, 4); <span class='error_goto'>__PYX_ERR(0, 172, __pyx_L3_error)</span>
-        }
-        CYTHON_FALLTHROUGH;
-        case  5:
-        if (likely((values[5] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_abbreviation_scale)) != 0)) kw_args--;
-        else {
-          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affinaGapDistanceArray", 1, 6, 6, 5); <span class='error_goto'>__PYX_ERR(0, 172, __pyx_L3_error)</span>
+          <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affinaGapDistanceArray", 1, 4, 4, 3); <span class='error_goto'>__PYX_ERR(0, 155, __pyx_L3_error)</span>
         }
       }
       if (unlikely(kw_args &gt; 0)) {
-        if (unlikely(<span class='pyx_c_api'>__Pyx_ParseOptionalKeywords</span>(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "affinaGapDistanceArray") &lt; 0)) <span class='error_goto'>__PYX_ERR(0, 172, __pyx_L3_error)</span>
+        if (unlikely(<span class='pyx_c_api'>__Pyx_ParseOptionalKeywords</span>(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "affinaGapDistanceArray") &lt; 0)) <span class='error_goto'>__PYX_ERR(0, 155, __pyx_L3_error)</span>
       }
-    } else if (<span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args) != 6) {
+    } else if (<span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args) != 4) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 0);
       values[1] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 1);
       values[2] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 2);
       values[3] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 3);
-      values[4] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 4);
-      values[5] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 5);
     }
-    __pyx_v_strings = <span class='pyx_c_api'>__pyx_convert_vector_from_py___Pyx_memviewslice_dc_int</span>(values[0]);<span class='error_goto'> if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 172, __pyx_L3_error)</span>
-    __pyx_v_matchWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[1]); if (unlikely((__pyx_v_matchWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 173, __pyx_L3_error)</span>
-    __pyx_v_mismatchWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[2]); if (unlikely((__pyx_v_mismatchWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 174, __pyx_L3_error)</span>
-    __pyx_v_gapWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[3]); if (unlikely((__pyx_v_gapWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 175, __pyx_L3_error)</span>
-    __pyx_v_spaceWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[4]); if (unlikely((__pyx_v_spaceWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 176, __pyx_L3_error)</span>
-    __pyx_v_abbreviation_scale = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[5]); if (unlikely((__pyx_v_abbreviation_scale == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 177, __pyx_L3_error)</span>
+    __pyx_v_strings = <span class='pyx_c_api'>__pyx_convert_vector_from_py___Pyx_memviewslice_dc_int</span>(values[0]);<span class='error_goto'> if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 155, __pyx_L3_error)</span>
+    __pyx_v_gapWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[1]); if (unlikely((__pyx_v_gapWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 156, __pyx_L3_error)</span>
+    __pyx_v_spaceWeight = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[2]); if (unlikely((__pyx_v_spaceWeight == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 157, __pyx_L3_error)</span>
+    __pyx_v_abbreviation_scale = __pyx_<span class='py_c_api'>PyFloat_AsFloat</span>(values[3]); if (unlikely((__pyx_v_abbreviation_scale == (float)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 158, __pyx_L3_error)</span>
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affinaGapDistanceArray", 1, 6, 6, <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args)); <span class='error_goto'>__PYX_ERR(0, 172, __pyx_L3_error)</span>
+  <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("affinaGapDistanceArray", 1, 4, 4, <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args)); <span class='error_goto'>__PYX_ERR(0, 155, __pyx_L3_error)</span>
   __pyx_L3_error:;
   <span class='pyx_c_api'>__Pyx_AddTraceback</span>("affinegap.affinegap.affinaGapDistanceArray", __pyx_clineno, __pyx_lineno, __pyx_filename);
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9affinegap_9affinegap_6affinaGapDistanceArray(__pyx_self, __pyx_v_strings, __pyx_v_matchWeight, __pyx_v_mismatchWeight, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale);
+  __pyx_r = __pyx_pf_9affinegap_9affinegap_6affinaGapDistanceArray(__pyx_self, __pyx_v_strings, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale);
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -1318,12 +1213,12 @@ static PyObject *__pyx_pw_9affinegap_9affinegap_7affinaGapDistanceArray(PyObject
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9affinegap_9affinegap_6affinaGapDistanceArray(CYTHON_UNUSED PyObject *__pyx_self, std::vector&lt;__Pyx_memviewslice&gt;  __pyx_v_strings, float __pyx_v_matchWeight, float __pyx_v_mismatchWeight, float __pyx_v_gapWeight, float __pyx_v_spaceWeight, float __pyx_v_abbreviation_scale) {
+static PyObject *__pyx_pf_9affinegap_9affinegap_6affinaGapDistanceArray(CYTHON_UNUSED PyObject *__pyx_self, std::vector&lt;__Pyx_memviewslice&gt;  __pyx_v_strings, float __pyx_v_gapWeight, float __pyx_v_spaceWeight, float __pyx_v_abbreviation_scale) {
   PyObject *__pyx_r = NULL;
   <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
   <span class='refnanny'>__Pyx_RefNannySetupContext</span>("affinaGapDistanceArray", 0);
   <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
-  __pyx_t_1 = <span class='pyx_c_api'>__pyx_convert_vector_to_py_float</span>(__pyx_f_9affinegap_9affinegap_affinaGapDistanceArray(__pyx_v_strings, __pyx_v_matchWeight, __pyx_v_mismatchWeight, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale, 0));<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 172, __pyx_L1_error)</span>
+  __pyx_t_1 = <span class='pyx_c_api'>__pyx_convert_vector_to_py_float</span>(__pyx_f_9affinegap_9affinegap_affinaGapDistanceArray(__pyx_v_strings, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale, 0));<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 155, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -1339,47 +1234,43 @@ static PyObject *__pyx_pf_9affinegap_9affinegap_6affinaGapDistanceArray(CYTHON_U
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return __pyx_r;
 }
-</pre><pre class="cython line score-0">&#xA0;<span class="">173</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">matchWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">174</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">mismatchWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">175</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">gapWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">176</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">spaceWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">177</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">abbreviation_scale</span><span class="p">):</span></pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">178</span>:     <span class="n">len_list_strings</span> <span class="o">=</span> <span class="n">strings</span><span class="o">.</span><span class="n">size</span><span class="p">()</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">156</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">gapWeight</span><span class="p">,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">157</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">spaceWeight</span><span class="p">,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">158</span>:                               <span class="n">const</span> <span class="nb">float</span> <span class="n">abbreviation_scale</span><span class="p">):</span></pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">159</span>:     <span class="n">len_list_strings</span> <span class="o">=</span> <span class="n">strings</span><span class="o">.</span><span class="n">size</span><span class="p">()</span></pre>
 <pre class='cython code score-0 '>  __pyx_v_len_list_strings = __pyx_v_strings.size();
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">179</span>:     <span class="n">size</span> <span class="o">=</span> <span class="n">len_list_strings</span> <span class="o">*</span> <span class="p">(</span><span class="n">len_list_strings</span> <span class="o">-</span> <span class="mf">1</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">160</span>:     <span class="n">size</span> <span class="o">=</span> <span class="n">len_list_strings</span> <span class="o">*</span> <span class="p">(</span><span class="n">len_list_strings</span> <span class="o">-</span> <span class="mf">1</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2</span></pre>
 <pre class='cython code score-0 '>  __pyx_v_size = ((__pyx_v_len_list_strings * (__pyx_v_len_list_strings - 1)) / 2);
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">180</span>:     <span class="k">cdef</span> <span class="kt">vector</span>[<span class="kt">float</span>] <span class="nf">out</span> <span class="o">=</span> <span class="n">vector</span><span class="p">[</span><span class="nb">float</span><span class="p">](</span><span class="n">size</span><span class="p">)</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">161</span>:     <span class="k">cdef</span> <span class="kt">vector</span>[<span class="kt">float</span>] <span class="nf">out</span> <span class="o">=</span> <span class="n">vector</span><span class="p">[</span><span class="nb">float</span><span class="p">](</span><span class="n">size</span><span class="p">)</span></pre>
 <pre class='cython code score-0 '>  try {
     __pyx_t_1 = std::vector&lt;float&gt; (__pyx_v_size);
   } catch(...) {
     __Pyx_CppExn2PyErr();
-    <span class='error_goto'>__PYX_ERR(0, 180, __pyx_L1_error)</span>
+    <span class='error_goto'>__PYX_ERR(0, 161, __pyx_L1_error)</span>
   }
   __pyx_v_out = __pyx_t_1;
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">181</span>:     <span class="n">k</span> <span class="o">=</span> <span class="mf">0</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">162</span>:     <span class="n">k</span> <span class="o">=</span> <span class="mf">0</span></pre>
 <pre class='cython code score-0 '>  __pyx_v_k = 0;
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">182</span>:     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_list_strings</span><span class="p">):</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">163</span>:     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_list_strings</span><span class="p">):</span></pre>
 <pre class='cython code score-0 '>  __pyx_t_2 = __pyx_v_len_list_strings;
   __pyx_t_3 = __pyx_t_2;
   for (__pyx_t_4 = 0; __pyx_t_4 &lt; __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_i = __pyx_t_4;
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">183</span>:         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mf">1</span><span class="p">,</span> <span class="n">len_list_strings</span><span class="p">):</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">164</span>:         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mf">1</span><span class="p">,</span> <span class="n">len_list_strings</span><span class="p">):</span></pre>
 <pre class='cython code score-0 '>    __pyx_t_5 = __pyx_v_len_list_strings;
     __pyx_t_6 = __pyx_t_5;
     for (__pyx_t_7 = (__pyx_v_i + 1); __pyx_t_7 &lt; __pyx_t_6; __pyx_t_7+=1) {
       __pyx_v_j = __pyx_t_7;
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">184</span>:             <span class="n">out</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">affineGapDistance</span><span class="p">(</span><span class="n">strings</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">strings</span><span class="p">[</span><span class="n">j</span><span class="p">],</span></pre>
-<pre class='cython code score-0 '>      (__pyx_v_out[__pyx_v_k]) = __pyx_f_9affinegap_9affinegap_affineGapDistance((__pyx_v_strings[__pyx_v_i]), (__pyx_v_strings[__pyx_v_j]), __pyx_v_matchWeight, __pyx_v_mismatchWeight, __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale, 0);
-</pre><pre class="cython line score-0">&#xA0;<span class="">185</span>:                               <span class="n">matchWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">186</span>:                               <span class="n">mismatchWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">187</span>:                               <span class="n">gapWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">188</span>:                               <span class="n">spaceWeight</span><span class="p">,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">189</span>:                               <span class="n">abbreviation_scale</span><span class="p">))</span></pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">190</span>:             <span class="n">k</span> <span class="o">+=</span> <span class="mf">1</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">165</span>:             <span class="n">out</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">affineGapDistance</span><span class="p">(</span><span class="n">strings</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">strings</span><span class="p">[</span><span class="n">j</span><span class="p">],</span></pre>
+<pre class='cython code score-0 '>      (__pyx_v_out[__pyx_v_k]) = __pyx_f_9affinegap_9affinegap_affineGapDistance((__pyx_v_strings[__pyx_v_i]), (__pyx_v_strings[__pyx_v_j]), __pyx_v_gapWeight, __pyx_v_spaceWeight, __pyx_v_abbreviation_scale, 0);
+</pre><pre class="cython line score-0">&#xA0;<span class="">166</span>:                               <span class="n">gapWeight</span><span class="p">,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">167</span>:                               <span class="n">spaceWeight</span><span class="p">,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">168</span>:                               <span class="n">abbreviation_scale</span><span class="p">))</span></pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">169</span>:             <span class="n">k</span> <span class="o">+=</span> <span class="mf">1</span></pre>
 <pre class='cython code score-0 '>      __pyx_v_k = (__pyx_v_k + 1);
     }
   }
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">191</span>:     <span class="k">return</span> <span class="n">out</span></pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">170</span>:     <span class="k">return</span> <span class="n">out</span></pre>
 <pre class='cython code score-0 '>  __pyx_r = __pyx_v_out;
   goto __pyx_L0;
 </pre></div></body></html>

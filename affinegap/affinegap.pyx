@@ -18,8 +18,6 @@ from libcpp.vector cimport vector
 
 
 cpdef float affineGapDistanceInputOrder(const int[::1]& int_memview_1, const int[::1]& int_memview_2, const int length1, const int length2,
-                              const float matchWeight,
-                              const float mismatchWeight,
                               const float gapWeight,
                               const float spaceWeight,
                               const float abbreviation_scale):
@@ -84,9 +82,9 @@ cpdef float affineGapDistanceInputOrder(const int[::1]& int_memview_1, const int
             #
             # M(i,j) = V(i-1,j-1) + (matchWeight | misMatchWeight)
             if int_ptr_2[i-1] == int_ptr_1[j-1] :
-                M = V_previous[j-1] + matchWeight
+                M = V_previous[j-1]
             else:
-                M = V_previous[j-1] + mismatchWeight
+                M = V_previous[j-1] + 1
 
             # V(i,j) is the minimum edit distance
             #
@@ -103,8 +101,6 @@ cpdef float affineGapDistanceInputOrder(const int[::1]& int_memview_1, const int
 
 
 cpdef float affineGapDistance(int[::1] string_a, int[::1] string_b,
-                              const float matchWeight,
-                              const float mismatchWeight,
                               const float gapWeight,
                               const float spaceWeight,
                               const float abbreviation_scale):
@@ -119,18 +115,11 @@ cpdef float affineGapDistance(int[::1] string_a, int[::1] string_b,
     cdef int length1 = string_a.shape[0]
     cdef int length2 = string_b.shape[0]
 
-    # if (string_a == string_b and
-    #     matchWeight == min(matchWeight,
-    #                        mismatchWeight,
-    #                        gapWeight)):
-    #     return matchWeight * length1
 
     if length1 < length2 :
         return affineGapDistanceInputOrder(string_b, string_a,
                               length2,
                               length1,
-                              matchWeight,
-                              mismatchWeight,
                               gapWeight,
                               spaceWeight,
                               abbreviation_scale)
@@ -138,16 +127,12 @@ cpdef float affineGapDistance(int[::1] string_a, int[::1] string_b,
         return affineGapDistanceInputOrder(string_a, string_b,
                               length1,
                               length2,
-                              matchWeight,
-                              mismatchWeight,
                               gapWeight,
                               spaceWeight,
                               abbreviation_scale)
 
 
 cpdef float normalizedAffineGapDistance(int[::1] string_a, int[::1] string_b,
-                                        const float matchWeight,
-                                        const float mismatchWeight,
                                         const float gapWeight,
                                         const float spaceWeight,
                                         const float abbreviation_scale) except? 999 :
@@ -161,8 +146,6 @@ cpdef float normalizedAffineGapDistance(int[::1] string_a, int[::1] string_b,
         raise ZeroDivisionError('normalizedAffineGapDistance cannot take two empty strings')
 
     cdef float distance = affineGapDistance(string_a, string_b,
-                                            matchWeight,
-                                            mismatchWeight,
                                             gapWeight,
                                             spaceWeight,
                                             abbreviation_scale)
@@ -170,8 +153,6 @@ cpdef float normalizedAffineGapDistance(int[::1] string_a, int[::1] string_b,
     return distance/normalizer
 
 cpdef vector[float] affinaGapDistanceArray(vector[int[::1]] strings,
-                              const float matchWeight,
-                              const float mismatchWeight,
                               const float gapWeight,
                               const float spaceWeight,
                               const float abbreviation_scale):
@@ -182,8 +163,6 @@ cpdef vector[float] affinaGapDistanceArray(vector[int[::1]] strings,
     for i in range(len_list_strings):
         for j in range(i+1, len_list_strings):
             out[k] = (affineGapDistance(strings[i], strings[j],
-                              matchWeight,
-                              mismatchWeight,
                               gapWeight,
                               spaceWeight,
                               abbreviation_scale))
