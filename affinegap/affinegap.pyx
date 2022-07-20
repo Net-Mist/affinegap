@@ -43,10 +43,7 @@ cpdef float affineGapDistanceInputOrder(const int[::1]& int_memview_1, const int
         D[j] = limits.INT_MAX
 
     for i in range(1, length2 +1) :
-
-        # V_previous, V_current = V_current, V_previous
-        for _ in range(0, length1 + 1) :
-            V_previous[_] = V_current[_]
+        V_previous, V_current = V_current, V_previous
 
         # Base conditions
         # V(i,0) = 0.5 + 0.5 * i
