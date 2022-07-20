@@ -5,39 +5,27 @@
 # cython: c_string_type=unicode, c_string_encoding=utf8
 # cython: language_level=3
 # cython: infer_types=True
+# # cython: initializedcheck=False
+# # cython: profile=True
+# # cython: linetrace=True
+# # cython: binding=True
+# # distutils: define_macros=CYTHON_TRACE=1
+# # distutils: define_macros=CYTHON_TRACE_NOGIL=1
 
 from libc cimport limits
 from libc.stdlib cimport free, malloc
-from libcpp.string cimport string
 from libcpp.vector cimport vector
 
 
-cpdef float affineGapDistance(string string_a, string string_b,
-                              float matchWeight = 1,
-                              float mismatchWeight = 11,
-                              float gapWeight = 10,
-                              float spaceWeight = 7,
-                              float abbreviation_scale = .125):
-    """
-    Calculate the affine gap distance between two strings
-
-    Default weights are from Alvaro Monge and Charles Elkan, 1996,
-    "The field matching problem: Algorithms and applications"
-    http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.23.9685
-    """
-
-    cdef int length1 = string_a.size()
-    cdef int length2 = string_b.size()
-
-    if (string_a == string_b and
-        matchWeight == min(matchWeight,
-                           mismatchWeight,
-                           gapWeight)):
-        return matchWeight * length1
-
-    if length1 < length2 :
-        string_a, string_b = string_b, string_a
-        length1, length2 = length2, length1
+cpdef float affineGapDistanceInputOrder(const int[::1]& int_memview_1, const int[::1]& int_memview_2, const int length1, const int length2,
+                              const float matchWeight,
+                              const float mismatchWeight,
+                              const float gapWeight,
+                              const float spaceWeight,
+                              const float abbreviation_scale):
+    # suppose len(int_memview_1) <= len(int_memview_2)
+    cdef const int * int_ptr_1 = &int_memview_1[0]
+    cdef const int * int_ptr_2 = &int_memview_2[0]
 
     # Initialize C Arrays
     cdef int memory_size = sizeof(float) * (length1+1)
@@ -60,7 +48,7 @@ cpdef float affineGapDistance(string string_a, string string_b,
         D[j] = limits.INT_MAX
 
     for i in range(1, length2 +1) :
-        char2 = string_b[i-1]
+
         # V_previous = V_current
         for _ in range(0, length1 + 1) :
             V_previous[_] = V_current[_]
@@ -72,7 +60,6 @@ cpdef float affineGapDistance(string string_a, string string_b,
         I = limits.INT_MAX
 
         for j in range(1, length1+1) :
-            char1 = string_a[j-1]
 
             # I(i,j) is the edit distance if the jth character of string 1
             # was inserted into string 2.
@@ -96,7 +83,7 @@ cpdef float affineGapDistance(string string_a, string string_b,
             # match or mismatch
             #
             # M(i,j) = V(i-1,j-1) + (matchWeight | misMatchWeight)
-            if char2 == char1 :
+            if int_ptr_2[i-1] == int_ptr_1[j-1] :
                 M = V_previous[j-1] + matchWeight
             else:
                 M = V_previous[j-1] + mismatchWeight
@@ -114,15 +101,59 @@ cpdef float affineGapDistance(string string_a, string string_b,
 
     return distance
 
-cpdef float normalizedAffineGapDistance(string string_a, string string_b,
-                                        float matchWeight = 1,
-                                        float mismatchWeight = 11,
-                                        float gapWeight = 10,
-                                        float spaceWeight = 7,
-                                        float abbreviation_scale = .125) except? 999 :
 
-    cdef int length1 = string_a.size()
-    cdef int length2 = string_b.size()
+cpdef float affineGapDistance(int[::1] string_a, int[::1] string_b,
+                              const float matchWeight,
+                              const float mismatchWeight,
+                              const float gapWeight,
+                              const float spaceWeight,
+                              const float abbreviation_scale):
+    """
+    Calculate the affine gap distance between two strings
+
+    Default weights are from Alvaro Monge and Charles Elkan, 1996,
+    "The field matching problem: Algorithms and applications"
+    http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.23.9685
+    """
+
+    cdef int length1 = string_a.shape[0]
+    cdef int length2 = string_b.shape[0]
+
+    # if (string_a == string_b and
+    #     matchWeight == min(matchWeight,
+    #                        mismatchWeight,
+    #                        gapWeight)):
+    #     return matchWeight * length1
+
+    if length1 < length2 :
+        return affineGapDistanceInputOrder(string_b, string_a,
+                              length2,
+                              length1,
+                              matchWeight,
+                              mismatchWeight,
+                              gapWeight,
+                              spaceWeight,
+                              abbreviation_scale)
+    else:
+        return affineGapDistanceInputOrder(string_a, string_b,
+                              length1,
+                              length2,
+                              matchWeight,
+                              mismatchWeight,
+                              gapWeight,
+                              spaceWeight,
+                              abbreviation_scale)
+
+
+cpdef float normalizedAffineGapDistance(int[::1] string_a, int[::1] string_b,
+                                        const float matchWeight,
+                                        const float mismatchWeight,
+                                        const float gapWeight,
+                                        const float spaceWeight,
+                                        const float abbreviation_scale) except? 999 :
+
+    cdef int length1 = string_a.shape[0]
+    cdef int length2 = string_b.shape[0]
 
     cdef float normalizer = length1 + length2
 
@@ -138,12 +169,12 @@ cpdef float normalizedAffineGapDistance(string string_a, string string_b,
 
     return distance/normalizer
 
-cpdef vector[float] affinaGapDistanceArray(vector[string] strings,
-                              float matchWeight = 1,
-                              float mismatchWeight = 11,
-                              float gapWeight = 10,
-                              float spaceWeight = 7,
-                              float abbreviation_scale = .125):
+cpdef vector[float] affinaGapDistanceArray(vector[int[::1]] strings,
+                              const float matchWeight,
+                              const float mismatchWeight,
+                              const float gapWeight,
+                              const float spaceWeight,
+                              const float abbreviation_scale):
     len_list_strings = strings.size()
     size = len_list_strings * (len_list_strings - 1) / 2
     cdef vector[float] out = vector[float](size)
